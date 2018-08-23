@@ -1,4 +1,4 @@
-# PUSH_SWAP_1
+# PUSH_SWAP
 I screwed up a lil... Try number 2... because why have two folders with the exact same functions?
 (i was told to add references)
 
