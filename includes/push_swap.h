@@ -15,11 +15,10 @@
 # include "../libft/includes/libft.h"
 
 int			        is_sort(t_list *lst);
-int		            error_official(int argc, char **argv);
 int		            is_not_digit(char *str);
 int		            checkup(int argc, char **argv);
-int		            error_checker(int argc, char **argv);
 
+void		        error_checker(int argc, char **argv);
 void		        backwards_lists_4(t_list *l_a, t_list *l_b);
 void		        back_wards_lists_3(t_list *l_a, t_list *l_b);
 void				sa(t_list *lst);

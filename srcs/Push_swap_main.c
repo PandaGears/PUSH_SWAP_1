@@ -17,7 +17,7 @@ int		main(int argc, char **argv)
 	t_list	*l_a;
 	t_list	*l_b;
 
-	error_official(argc, argv);
+	error_checker(argc, argv);
 	argv++;
 	l_a = ft_list_new();
 	l_b = ft_list_new();

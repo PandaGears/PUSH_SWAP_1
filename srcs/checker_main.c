@@ -16,17 +16,14 @@ int		main(int argc, char **argv)
 {
 	t_list	*l_a;
 	t_list	*l_b;
-	error_official(argc, argv);
-		argv++;
-		l_a = ft_list_new();
+	error_checker(argc, argv);
+	argv++;
+	l_a = ft_list_new();
 	l_b = ft_list_new();
 		while (*argv)
 		{
 			if (ft_atoi(*argv) > 2147483647 || ft_atoi(*argv) < -2147483647)
-			{
-				ft_putstr(RED"Error\n");
-				exit(1);
-			}
+				error();
 			l_a = ft_list_append(l_a, ft_atoi(*argv));
 			argv++;
 		}

@@ -58,6 +58,23 @@ void		backwards_lists_4(t_list *l_a, t_list *l_b)
 		push_swap(l_a, l_b);
 }
 
+void		backwards_lists_5(t_list *l_a, t_list *l_b)
+{
+
+	if (l_a->head->data > l_a->head->next->data && \
+		l_a->head->next->data > l_a->head->next->next->data && \
+		l_a->head->next->next->data > l_a->tail->prev->data && \
+		l_a->tail->data < l_a->tail->prev->data)
+		{
+			sa(l_a);
+			rra(l_a);
+			rra(l_a);
+			sa(l_a);
+		}
+	else
+		push_swap(l_a, l_b);
+}
+
 void		back_wards_lists_3(t_list *l_a, t_list *l_b)
 {
 	if (l_a->head->data > l_a->head->next->data && \

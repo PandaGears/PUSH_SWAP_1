@@ -37,8 +37,6 @@ void			sa(t_list *lst)
 	if (is_list(lst))
 	{
 		swap(lst);
-		ft_putstr("sa");
-		ft_putstr("\n");
 	}
 }
 
@@ -47,8 +45,6 @@ void			sb(t_list *lst)
 	if (is_list(lst))
 	{
 		swap(lst);
-		ft_putstr("sb");
-		ft_putstr("\n");
 	}
 }
 
@@ -58,7 +54,5 @@ void			ss(t_list *l_a, t_list *l_b)
 	{
 		swap(l_a);
 		swap(l_b);
-		ft_putstr("ss");
-		ft_putstr("\n");
 	}
 }

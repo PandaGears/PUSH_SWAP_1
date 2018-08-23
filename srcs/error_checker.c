@@ -11,10 +11,10 @@ int		is_not_digit(char *str)
 	{
 		if (str[i] != '-' && str[i] != '+' && \
 		(!(ft_isdigit(str[i]))) && (!(ft_isspace(str[i]))))
-			return (0);
+			return (1);
 		i++;
 	}
-	return (1);
+	return (0);
 }
 
 int		checkup(int argc, char **argv)
@@ -31,42 +31,25 @@ int		checkup(int argc, char **argv)
 		while (j < argc - 1)
 		{
 			if (tmp == ft_atoi(argv[j + 1]))
-				return (0);
+				return (1);
 			j++;
 		}
 		i++;
 	}
-	return (1);
+	return (0);
 }
 
-int		error_checker(int argc, char **argv)
+void		error_checker(int argc, char **argv)
 {
-	long i;
-	int cnt;
-
-	i = 1;
-	cnt = 1;
-	while (i < argc)
-	{
-		if (is_not_digit(argv[1]))
-			cnt++;
-		else
-			break ;
-		i++;
-	}
+	if(argc <= 1)
+		exit(1);
 	if (checkup(argc, argv) == 1)
-		return ((cnt == argc) ? 1 : 0);
-	return (0);
-}
-
-int		error_official(int argc, char **argv)
-{
-		if (!error_checker(argc, argv) || argc <= 1)
+		error();
+	argv++;
+	while (*argv)
 	{
-		if (!error_checker(argc, argv))
+		if ((is_not_digit(*argv)) == 1)
 			error();
-		else if(argc <= 1)
-			exit(1);
+		argv++;
 	}
-	return (0);
 }

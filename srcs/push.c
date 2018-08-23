@@ -30,7 +30,6 @@ void			pa(t_list *l_a, t_list *l_b)
 	if (is_list(l_b))
 	{
 		push(l_a, l_b);
-		ft_putstr("pa\n");
 	}
 }
 
@@ -39,6 +38,5 @@ void			pb(t_list *l_a, t_list *l_b)
 	if (is_list(l_a))
 	{
 		push(l_b, l_a);
-		ft_putstr("pb\n");
 	}
 }

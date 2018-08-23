@@ -1,6 +1,6 @@
 #include "../includes/push_swap.h"
 
-void	smallest_first(t_list *lst)
+void	smallest_first(t_list *lst) //standard
 {
 	t_node	*node;
 	int		tmp;
@@ -24,3 +24,8 @@ void	smallest_first(t_list *lst)
 			ra(lst);
 	}
 }
+
+//void	quicksorter(t_list *lst) //for bigger args
+//{
+
+//}
