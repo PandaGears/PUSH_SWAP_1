@@ -23,7 +23,7 @@ These programs have to account for some certain things:
                                                         
     We want to sort intigers, so no letters or other ascii values allowed!
                                                         
-    We can't have duplicates, triplicates ect of the same intigers.
+    We can't have duplicates, triplicates etc. of the same intigers.
                                                         
     All intigers have to end somewhere, so we can't have any intigers greater than the MAXINT or lower than the MININT.
                                                         
