@@ -36,7 +36,6 @@ void		push_swap(t_list *l_a, t_list *l_b)
 		if (l_b->head == NULL)
 		{
 			pa(l_a, l_b);
-			ft_putchar('\n');
 		}
 		else
 			pa(l_a, l_b);
@@ -66,10 +65,14 @@ void		backwards_lists_5(t_list *l_a, t_list *l_b)
 		l_a->head->next->next->data > l_a->tail->prev->data && \
 		l_a->tail->data < l_a->tail->prev->data)
 		{
-			sa(l_a);
-			rra(l_a);
 			rra(l_a);
 			sa(l_a);
+			pb(l_b, l_a);
+			pb(l_b, l_a);
+			ss(l_a, l_b);
+			rra(l_a);
+			pa(l_a, l_b);
+			pa(l_a, l_b);
 		}
 	else
 		push_swap(l_a, l_b);

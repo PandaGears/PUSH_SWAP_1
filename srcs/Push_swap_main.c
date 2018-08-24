@@ -37,5 +37,10 @@ int		main(int argc, char **argv)
 		back_wards_lists_3(l_a, l_b);
 	else
 		push_swap(l_a, l_b);
+	if (is_sort(l_a) && l_b != NULL)
+			ok();
+		else
+			ko();
+		return(0);
 	return (0);
 }

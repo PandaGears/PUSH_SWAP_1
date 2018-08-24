@@ -22,13 +22,13 @@ int		main(int argc, char **argv)
 	l_b = ft_list_new();
 		while (*argv)
 		{
-			if (ft_atoi(*argv) > 2147483647 || ft_atoi(*argv) < -2147483647)
+			if (ft_atoi(*argv) > 2147483647 || ft_atoi(*argv) < -2147483648)
 				error();
 			l_a = ft_list_append(l_a, ft_atoi(*argv));
 			argv++;
 		}
-		/*Set up instruction checker here*/
-		if (is_sort(l_a))
+		checker_r(l_a, l_b);
+		if (is_sort(l_a) && l_b != NULL)
 			ok();
 		else
 			ko();

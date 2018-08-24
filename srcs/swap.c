@@ -48,11 +48,28 @@ void			sb(t_list *lst)
 	}
 }
 
-void			ss(t_list *l_a, t_list *l_b)
+void	ss(t_list *l_a, t_list *l_b)
 {
-	if (is_list(l_a) && is_list(l_b))
+	t_node	*node_a;
+	t_node	*node_b;
+
+	if (!(l_a == NULL || l_a->head == NULL || \
+	l_a->head->next == NULL) && !(l_b == NULL || \
+	l_b->head == NULL || l_b->head->next == NULL))
 	{
-		swap(l_a);
-		swap(l_b);
+		node_a = l_a->head;
+		l_a->head = node_a->next;
+		l_a->head->prev = NULL;
+		node_a->prev = l_a->head;
+		node_a->next = l_a->head->next;
+		l_a->head->next = node_a;
+		node_a->next->prev = node_a;
+		node_b = l_b->head;
+		l_b->head = node_b->next;
+		l_b->head->prev = NULL;
+		node_b->prev = l_b->head;
+		node_b->next = l_b->head->next;
+		l_b->head->next = node_b;
+		node_b->next->prev = node_b;
 	}
 }
