@@ -28,7 +28,7 @@ int		main(int argc, char **argv)
 			argv++;
 		}
 		checker_r(l_a, l_b);
-		if (is_sort(l_a) && l_b != NULL)
+		if (is_sort(l_a))
 			ok();
 		else
 			ko();

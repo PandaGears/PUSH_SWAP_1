@@ -15,9 +15,7 @@
 int			is_sort(t_list *lst)
 {
 	t_node	*node;
-	int 	i;
 
-	i = 0;
 	node = lst->head;
 	if (lst->head->data == lst->tail->data)
 		return (1);

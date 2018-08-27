@@ -31,16 +31,16 @@ int		main(int argc, char **argv)
 		l_a = ft_list_append(l_a, ft_atoi(*argv));
 		argv++;
 	}
-	if (argc == 5)
+	if (argc == 6)
+		backwards_lists_5(l_a, l_b);
+	else if (argc == 5)
 		backwards_lists_4(l_a, l_b);
 	else if (argc == 4)
 		back_wards_lists_3(l_a, l_b);
 	else
 		push_swap(l_a, l_b);
-	if (is_sort(l_a) && l_b != NULL)
-			ok();
-		else
-			ko();
-		return(0);
-	return (0);
+	if (is_sort(l_a))
+		ok();
+	else
+		ko();
 }

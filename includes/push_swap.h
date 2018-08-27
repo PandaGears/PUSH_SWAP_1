@@ -18,8 +18,10 @@ int			        is_sort(t_list *lst);
 int		            is_not_digit(char *str);
 int		            checkup(int argc, char **argv);
 
-void		        checker_r(t_list *l_a, t_list *l_b);
+t_list 		        *checker_r(t_list *l_a, t_list *l_b);
+
 void		        error_checker(int argc, char **argv);
+void		        backwards_lists_5(t_list *l_a, t_list *l_b);
 void		        backwards_lists_4(t_list *l_a, t_list *l_b);
 void		        back_wards_lists_3(t_list *l_a, t_list *l_b);
 void				sa(t_list *lst);

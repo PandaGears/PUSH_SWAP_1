@@ -65,8 +65,6 @@ void		backwards_lists_5(t_list *l_a, t_list *l_b)
 		l_a->head->next->next->data > l_a->tail->prev->data && \
 		l_a->tail->data < l_a->tail->prev->data)
 		{
-			rra(l_a);
-			sa(l_a);
 			pb(l_b, l_a);
 			pb(l_b, l_a);
 			ss(l_a, l_b);
