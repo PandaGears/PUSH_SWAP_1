@@ -43,4 +43,5 @@ int		main(int argc, char **argv)
 		ok();
 	else
 		ko();
+	return(0);
 }

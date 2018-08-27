@@ -36,6 +36,11 @@ int		checkup(int argc, char **argv)
 		}
 		i++;
 	}
+	if (ft_atoi(*argv) > 2147483647 || ft_atoi(*argv) < -2147483648)
+	{
+		ft_putstr(RED"Error");
+		exit(1);
+	}
 	return (0);
 }
 

@@ -40,11 +40,10 @@ void		checker_p(const char *str, t_list *l_a, t_list *l_b)
 		error();
 }
 
-t_list		*checker_r(t_list *l_a, t_list *l_b)
+void	checker_r(t_list *l_a, t_list *l_b)
 {
 	char *str;
 
 	while(get_next_line(0, &str))
 		checker_p(str, l_a, l_b);
-	return(l_a);
 }

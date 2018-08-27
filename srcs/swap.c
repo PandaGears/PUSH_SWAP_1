@@ -49,7 +49,7 @@ void			sb(t_list *lst)
 
 void			ss(t_list *l_a, t_list *l_b)
 {
-	if ((l_a != NULL && l_a->head != NULL && l_a->head->next != NULL))
+	if (l_a != NULL && l_a->head != NULL && l_a->head->next != NULL)
 		sa(l_a);
 	if (l_b != NULL && l_b->head != NULL && l_b->head->next != NULL)
 		sb(l_b);

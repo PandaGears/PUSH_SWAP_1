@@ -23,11 +23,11 @@ int			is_sort(t_list *l_a, t_list *l_b)
 	while (node->next != NULL)
 	{
 		if (node->data > node->next->data)
-			if(l_b == NULL)
 				return (0);
 		node = node->next;
 	}
-	if(l_b != NULL)
+	if(l_b->head != NULL)
 		return (0);
-	return(1);
+	else
+		return(1);
 }

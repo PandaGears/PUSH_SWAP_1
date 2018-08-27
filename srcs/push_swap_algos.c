@@ -1,6 +1,6 @@
 #include "../includes/push_swap.h"
 
-void	smallest_first(t_list *lst) //standard
+void	smallest_first(t_list *lst)
 {
 	t_node	*node;
 	int		tmp;
@@ -25,7 +25,21 @@ void	smallest_first(t_list *lst) //standard
 	}
 }
 
-//void	quicksorter(t_list *lst) //for bigger args
-//{
+void	bubble_sorter(int *a, int size) //for smaller args
+{
+	int i;
+	int j;
 
-//}
+	i = 0;
+	while(i < (size - 1))
+	{
+		j = 0;
+		while(j < size - (i + 1))
+		{
+			if(a[j] > a[j + 1])
+				ft_swap(&a[j], &a[j + 1]);	
+		}
+		j++;
+	}
+	i++;
+}

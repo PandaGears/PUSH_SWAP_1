@@ -62,15 +62,17 @@ void		backwards_lists_5(t_list *l_a, t_list *l_b)
 
 	if (l_a->head->data > l_a->head->next->data && \
 		l_a->head->next->data > l_a->head->next->next->data && \
-		l_a->head->next->next->data > l_a->tail->prev->data && \
-		l_a->tail->data < l_a->tail->prev->data)
+		l_a->head->next->next->data > l_a->head->next->next->next->data && \
+		l_a->tail->data < l_a->head->next->next->next->data)
 		{
-			pb(l_b, l_a);
-			pb(l_b, l_a);
+			pb(l_a, l_b);
+			pb(l_a, l_b);
 			ss(l_a, l_b);
 			rra(l_a);
 			pa(l_a, l_b);
 			pa(l_a, l_b);
+			ra(l_a);
+			ra(l_a);
 		}
 	else
 		push_swap(l_a, l_b);

@@ -22,8 +22,6 @@ int		main(int argc, char **argv)
 	l_b = ft_list_new();
 		while (*argv)
 		{
-			if (ft_atoi(*argv) > 2147483647 || ft_atoi(*argv) < -2147483648)
-				error();
 			l_a = ft_list_append(l_a, ft_atoi(*argv));
 			argv++;
 		}
@@ -32,5 +30,4 @@ int		main(int argc, char **argv)
 			ok();
 		else
 			ko();
-		return(0);
 }
