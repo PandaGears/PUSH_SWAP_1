@@ -16,19 +16,19 @@
 
 void		push_swap(t_list *l_a, t_list *l_b)
 {
-	if (is_sort(l_a))
+	if (is_sort(l_a, l_b))
 		return ;
 	while (l_a->head != NULL)
 	{
-		if (is_sort(l_a) && !is_sort(l_b))
+		if (is_sort(l_a, l_b) && !is_sort(l_b, l_a))
 			break ;
 		smallest_first(l_a);
-		if (is_sort(l_a))
+		if (is_sort(l_a, l_b))
 			break ;
-		if (is_sort(l_a) && !is_sort(l_b))
+		if (is_sort(l_a, l_b) && !is_sort(l_b, l_a))
 			break ;
 		pb(l_a, l_b);
-		if (is_sort(l_a) && !is_sort(l_b))
+		if (is_sort(l_a, l_b) && !is_sort(l_b, l_a))
 			break ;
 	}
 	while (l_b->head != NULL)

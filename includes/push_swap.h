@@ -14,7 +14,7 @@
 # define PUSH_SWAP_H
 # include "../libft/includes/libft.h"
 
-int			        is_sort(t_list *lst);
+int			        is_sort(t_list *l_a, t_list *l_b);
 int		            is_not_digit(char *str);
 int		            checkup(int argc, char **argv);
 

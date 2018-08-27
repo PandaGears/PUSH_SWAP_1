@@ -12,18 +12,22 @@
 
 #include "../includes/push_swap.h"
 
-int			is_sort(t_list *lst)
+int			is_sort(t_list *l_a, t_list *l_b)
 {
 	t_node	*node;
 
-	node = lst->head;
-	if (lst->head->data == lst->tail->data)
-		return (1);
+	node = l_a->head;
+	if (l_a->head->data == l_a->tail->data)
+		if(l_b == NULL)
+			return (1);
 	while (node->next != NULL)
 	{
 		if (node->data > node->next->data)
-			return (0);
+			if(l_b == NULL)
+				return (0);
 		node = node->next;
 	}
-	return (1);
+	if(l_b != NULL)
+		return (0);
+	return(1);
 }
