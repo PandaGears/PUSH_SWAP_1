@@ -6,7 +6,7 @@
 /*   By: tradlof <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/22 08:51:32 by tradlof           #+#    #+#             */
-/*   Updated: 2018/08/22 08:57:55 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/08/28 08:54:41 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ void		checker_p(const char *str, t_list *l_a, t_list *l_b)
 		error();
 }
 
-void	checker_r(t_list *l_a, t_list *l_b)
+void		checker_r(t_list *l_a, t_list *l_b)
 {
 	char *str;
 
-	while(get_next_line(0, &str))
+	while (get_next_line(0, &str))
 		checker_p(str, l_a, l_b);
 }

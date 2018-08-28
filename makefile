@@ -5,7 +5,7 @@ SRC_PATH_1 = ./srcs/
 
 OBJ_PATH_1 = ./objs/
 
-INC_PATH_1 = ./includes/ 
+INC_PATH_1 = ./includes/
 
 SRC_PATH_2 = ./srcs/
 

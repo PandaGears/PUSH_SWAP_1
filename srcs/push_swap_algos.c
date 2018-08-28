@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap_algos.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tradlof <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/08/28 08:40:16 by tradlof           #+#    #+#             */
+/*   Updated: 2018/08/28 09:01:44 by tradlof          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 void	smallest_first(t_list *lst)
@@ -19,25 +31,24 @@ void	smallest_first(t_list *lst)
 			rra(lst);
 		else if (lst->head->data != tmp && lst->head->next->data == tmp)
 			sa(lst);
-
 		else
 			ra(lst);
 	}
 }
 
-void	bubble_sorter(int *a, int size) //for smaller args
+void	bubble_sorter(int *a, int size)
 {
 	int i;
 	int j;
 
 	i = 0;
-	while(i < (size - 1))
+	while (i < (size - 1))
 	{
 		j = 0;
-		while(j < size - (i + 1))
+		while (j < size - (i + 1))
 		{
-			if(a[j] > a[j + 1])
-				ft_swap(&a[j], &a[j + 1]);	
+			if (a[j] > a[j + 1])
+				ft_swap(&a[j], &a[j + 1]);
 		}
 		j++;
 	}

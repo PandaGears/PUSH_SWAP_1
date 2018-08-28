@@ -6,7 +6,7 @@
 /*   By: tradlof <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 17:03:38 by tradlof           #+#    #+#             */
-/*   Updated: 2018/08/14 07:00:36 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/08/28 09:57:18 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -183,7 +183,7 @@ char					*ft_strjoin(char const *s1, char const *s2);
 char					*ft_strtrim(char const *s);
 char					**ft_strsplit(char const *s, char c);
 
-void    				ft_swap(int *a, int *b);
+void					ft_swap(int *a, int *b);
 char					*ft_itoa(int n);
 int						ft_atoi(const char *str);
 

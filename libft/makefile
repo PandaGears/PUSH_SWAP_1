@@ -10,11 +10,14 @@
 #                                                                              #
 # **************************************************************************** #
 
-TAG = 	gcc
 NAME	= libft.a
-FLAG	= -Wall -Werror -Wextra
+CFLAGS = -Wall -Wextra -Werror
+CC = gcc $(CFLAGS)
+OBJ_PATH = ./objs/
+INC_PATH = ./includes/
+SRC_PATH = ./srcs/
 
-SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c \
+SRC_NAME = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c \
 	ft_memcmp.c ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c \
 	ft_strncat.c ft_strlcat.c ft_strchr.c ft_strrchr.c ft_strstr.c \
 	ft_strnstr.c ft_strcmp.c ft_strncmp.c ft_atoi.c ft_isalpha.c ft_isdigit.c \
@@ -38,17 +41,27 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c \
 	ft_create_elem.c ft_countwords.c ft_list_append.c ft_list_del.c \
 	ft_list_new.c ft_list_prepend.c ft_print_list.c ft_swap.c ft_pivot.c
 
+OBJ_NAME = $(SRC_NAME:.c=.o)
+OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
+SRC = $(addprefix $(SRC_PATH)/,$(SRC_NAME))
+
 all		: $(NAME)
 
-$(NAME)	:
+$(OBJ_PATH)%.o: $(SRC_PATH)%.c
+	@mkdir $(OBJ_PATH) 2> /dev/null || true
+	@$(CC) -I$(INC_PATH) -o $@ -c $<
+
+$(NAME): $(OBJ) $(INC_PATH)
 	@echo 					"\x1B[36m""		 	Maybe making a Library..." 
-	@$(TAG) $(FLAG) -c $(SRC)
-	@ar rc $(NAME) *.o
+	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo 				"\x1B[32m""		Might have made a Library... A bigass one!" 
+	@echo 				"\x1B[32m""		Might have made a Library... A bigass one!"
+
 clean	:
 	@echo 				"\x1B[33m""                      Might have removed a thing..."
+	@rm -f $(OBJ)
 	@rm -f *.o
+	@rmdir $(OBJ_PATH) 2> /dev/null || true
 	@echo 				"\x1B[31m""		A lot of things may have been removed..."
 fclean: clean
 	@echo 				"\x1B[31m""			  Removed moar stuff..."
