@@ -23,7 +23,10 @@ int			is_not_digit(char *str)
 	{
 		if (str[i] != '-' && str[i] != '+' && \
 				(!(ft_isdigit(str[i]))) && (!(ft_isspace(str[i]))))
+				{
+					ft_putstr("words");
 			return (1);
+				}
 		i++;
 	}
 	return (0);
@@ -56,12 +59,10 @@ void		error_checker(int argc, char **argv)
 	if (argc <= 1)
 		exit(1);
 	if (dup_check(argc, argv) == 1)
-		error();
+		ft_putstr("boop");
 	argv++;
 	while (*argv)
 	{
-		if	(ft_strcmp(ft_itoa((int)*argv), ft_itoa(ft_atoi(*argv) == 1)))
-			error();
 		if (ft_atoi(*argv) > 2147483647)
 		{
 			ft_putstr(RED"Error\n");
