@@ -60,7 +60,9 @@ void		error_checker(int argc, char **argv)
 	argv++;
 	while (*argv)
 	{
-		if (ft_atoi(*argv) > 2147483647 || ft_atoi(*argv) < -2147483647)
+		if	(ft_strcmp(ft_itoa((int)*argv), ft_itoa(ft_atoi(*argv) == 1)))
+			error();
+		if (ft_atoi(*argv) > 2147483647)
 		{
 			ft_putstr(RED"Error\n");
 			exit(1);

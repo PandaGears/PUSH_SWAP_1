@@ -13,7 +13,7 @@ OBJ_PATH_2 = ./objs/
 
 INC_PATH_2 = ./includes/
 
-SRC_NAME_1 = Push_swap_main.c swap.c push.c rotate.c reverse_rotate.c push_swap.c notify.c is_sort.c error_checker.c \
+SRC_NAME_1 = push_swap_main.c swap.c push.c rotate.c reverse_rotate.c push_swap.c notify.c is_sort.c error_checker.c \
 			push_swap_algos.c
 
 SRC_NAME_2 = checker_main.c swap.c push.c rotate.c reverse_rotate.c checker_instruct.c notify.c is_sort.c error_checker.c
