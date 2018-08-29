@@ -199,6 +199,9 @@ void					ft_putstr_fd(char const *s, int fd);
 void					ft_putendl_fd(char const *s, int fd);
 void					ft_putnbr_fd(int n, int fd);
 
+long long				ft_atol(const char *str);
+
+int						nbrlen(int num);
 int						ft_pivot(int i, int j);
 int						ft_isspace(int c);
 int						ft_isalpha(int c);

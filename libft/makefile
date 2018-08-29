@@ -39,7 +39,8 @@ SRC_NAME = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c \
 	ft_list_disconnect.c ft_list_is_head.c ft_list_is_single.c \
 	ft_list_moveto_next.c ft_list_moveto_prev.c ft_list_swap.c \
 	ft_create_elem.c ft_countwords.c ft_list_append.c ft_list_del.c \
-	ft_list_new.c ft_list_prepend.c ft_print_list.c ft_swap.c ft_pivot.c
+	ft_list_new.c ft_list_prepend.c ft_print_list.c ft_swap.c ft_pivot.c \
+	ft_atol.c
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
 OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))

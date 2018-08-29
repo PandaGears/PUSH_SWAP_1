@@ -12,7 +12,7 @@
 
 #include "../includes/libft.h"
 
-static int	count_chars(int num)
+int	nbrlen(int num)
 {
 	int		i;
 
@@ -33,7 +33,7 @@ char		*ft_itoa(int n)
 	char			*str;
 	unsigned int	ncpy;
 
-	len = count_chars(n);
+	len = nbrlen(n);
 	if (!(str = (char *)malloc(sizeof(char) * len + 1)))
 		return (NULL);
 	if (n < 0)

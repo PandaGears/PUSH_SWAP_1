@@ -54,3 +54,32 @@ void	bubble_sorter(int *a, int size)
 	}
 	i++;
 }
+
+void	quicksorter(int *lst, int m, int n)
+{
+	int	key;
+	int i;
+	int j;
+	int k;
+	
+	if (m < n)
+	{
+		k = ft_pivot(m, n);
+		ft_swap(&lst[m], &lst[k]);
+		key = lst[m];
+		i = m + 1;
+		j = n;
+		while (i <= j)
+		{
+			while ((i <= n) && (lst[i] <= key))
+				i++;
+			while ((j >= m) && (lst[j] > key))
+				j--;
+			if(i < j)
+				ft_swap(&lst[i], &lst[j]);
+		}
+		ft_swap(&lst[m], &lst[j]);
+		quicksorter(lst, m, j - 1);
+		quicksorter(lst, j + 1, n);
+	}
+}
