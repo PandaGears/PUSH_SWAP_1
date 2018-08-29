@@ -25,7 +25,7 @@ void		push_swap(t_list *l_a, t_list *l_b)
 			break ;
 		if (is_sort(l_a, l_b) && !is_sort(l_b, l_a))
 			break ;
-		pb(l_a, l_b);
+		pb_print(l_a, l_b);
 		if (is_sort(l_a, l_b) && !is_sort(l_b, l_a))
 			break ;
 	}
@@ -33,10 +33,10 @@ void		push_swap(t_list *l_a, t_list *l_b)
 	{
 		if (l_b->head == NULL)
 		{
-			pa(l_a, l_b);
+			pa_print(l_a, l_b);
 		}
 		else
-			pa(l_a, l_b);
+			pa_print(l_a, l_b);
 	}
 }
 
@@ -46,10 +46,10 @@ void		backwards_lists_4(t_list *l_a, t_list *l_b)
 			l_a->head->next->data > l_a->head->next->next->data && \
 			l_a->tail->data < l_a->head->next->next->data)
 	{
-		sa(l_a);
-		rra(l_a);
-		rra(l_a);
-		sa(l_a);
+		sa_print(l_a);
+		rra_print(l_a);
+		rra_print(l_a);
+		sa_print(l_a);
 	}
 	else
 		push_swap(l_a, l_b);
@@ -62,14 +62,14 @@ void		backwards_lists_5(t_list *l_a, t_list *l_b)
 			l_a->head->next->next->data > l_a->head->next->next->next->data && \
 			l_a->tail->data < l_a->head->next->next->next->data)
 	{
-		pb(l_a, l_b);
-		pb(l_a, l_b);
-		ss(l_a, l_b);
-		rra(l_a);
-		pa(l_a, l_b);
-		pa(l_a, l_b);
-		ra(l_a);
-		ra(l_a);
+		pb_print(l_a, l_b);
+		pb_print(l_a, l_b);
+		ss_print(l_a, l_b);
+		rra_print(l_a);
+		pa_print(l_a, l_b);
+		pa_print(l_a, l_b);
+		ra_print(l_a);
+		ra_print(l_a);
 	}
 	else
 		push_swap(l_a, l_b);
@@ -80,8 +80,8 @@ void		back_wards_lists_3(t_list *l_a, t_list *l_b)
 	if (l_a->head->data > l_a->head->next->data && \
 			l_a->tail->data < l_a->head->next->data)
 	{
-		sa(l_a);
-		rra(l_a);
+		sa_print(l_a);
+		rra_print(l_a);
 	}
 	else
 		push_swap(l_a, l_b);

@@ -28,11 +28,11 @@ void	smallest_first(t_list *lst)
 	while (lst->head->data != tmp)
 	{
 		if (lst->head->data != tmp && lst->tail->data == tmp)
-			rra(lst);
+			rra_print(lst);
 		else if (lst->head->data != tmp && lst->head->next->data == tmp)
-			sa(lst);
+			sa_print(lst);
 		else
-			ra(lst);
+			ra_print(lst);
 	}
 }
 

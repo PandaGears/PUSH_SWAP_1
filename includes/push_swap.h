@@ -17,13 +17,20 @@
 int					is_sort(t_list *l_a, t_list *l_b);
 int					is_not_digit(char *str);
 int					checkup(int argc, char **argv);
+int					is_list(t_list *lst);
+void				error_checker(int argc, char **argv);
 
 void				checker_r(t_list *l_a, t_list *l_b);
 void				bubble_sorter(int *a, int size);
-void				error_checker(int argc, char **argv);
 void				backwards_lists_5(t_list *l_a, t_list *l_b);
 void				backwards_lists_4(t_list *l_a, t_list *l_b);
 void				back_wards_lists_3(t_list *l_a, t_list *l_b);
+
+void				swap(t_list *lst);
+void				rotate(t_list *lst);
+void				reverse_rotate(t_list *lst);
+void				push(t_list *l_a, t_list *l_b);
+
 void				sa(t_list *lst);
 void				sb(t_list *lst);
 void				ss(t_list *l_a, t_list *l_b);
@@ -35,6 +42,19 @@ void				rr(t_list *l_a, t_list *l_b);
 void				rra(t_list *lst);
 void				rrb(t_list *lst);
 void				rrr(t_list *l_a, t_list *l_b);
+
+void				rrr_print(t_list *l_a, t_list *l_b);
+void				rra_print(t_list *l_a);
+void				rrb_print(t_list *l_b);
+void				rr_print(t_list *l_a, t_list *l_b);
+void				ra_print(t_list *l_a);
+void				rb_print(t_list *l_b);
+void				sa_print(t_list *l_a);
+void				sb_print(t_list *l_b);
+void				ss_print(t_list *l_a, t_list *l_b);
+void				pa_print(t_list *l_a, t_list *l_b);
+void				pb_print(t_list *l_a, t_list *l_b);
+
 void				push_swap(t_list *l_a, t_list *l_b);
 void				error(void);
 void				ok(void);

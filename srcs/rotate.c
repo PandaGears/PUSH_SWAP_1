@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-static void	rotate(t_list *lst)
+void	rotate(t_list *lst)
 {
 	ft_list_append(lst, lst->head->data);
 	ft_list_del(lst, lst->head);

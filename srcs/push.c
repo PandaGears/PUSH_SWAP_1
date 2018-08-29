@@ -12,14 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-static int		is_list(t_list *lst)
-{
-	if (lst == NULL || lst->head == NULL)
-		return (0);
-	return (1);
-}
-
-static void		push(t_list *l_a, t_list *l_b)
+void		push(t_list *l_a, t_list *l_b)
 {
 	ft_list_prepend(l_a, l_b->head->data);
 	ft_list_del(l_b, l_b->head);

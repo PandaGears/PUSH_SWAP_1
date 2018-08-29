@@ -12,14 +12,14 @@
 
 #include "../includes/push_swap.h"
 
-static int		is_list(t_list *lst)
+int		is_list(t_list *lst)
 {
 	if (lst != NULL && lst->head != NULL && lst->head->next != NULL)
 		return (1);
 	return (0);
 }
 
-static void		swap(t_list *lst)
+void		swap(t_list *lst)
 {
 	t_node	*node;
 
