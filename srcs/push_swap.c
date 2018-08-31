@@ -12,50 +12,23 @@
 
 #include "../includes/push_swap.h"
 
-void		push_swap(t_list *l_a, t_list *l_b)
-{
-	if (is_sort(l_a, l_b))
-		return ;
-	while (l_a->head != NULL)
-	{
-		if (is_sort(l_a, l_b) && !is_sort(l_b, l_a))
-			break ;
-		smallest_first(l_a);
-		if (is_sort(l_a, l_b))
-			break ;
-		if (is_sort(l_a, l_b) && !is_sort(l_b, l_a))
-			break ;
-		pb_print(l_a, l_b);
-		if (is_sort(l_a, l_b) && !is_sort(l_b, l_a))
-			break ;
-	}
-	while (l_b->head != NULL)
-	{
-		if (l_b->head == NULL)
-		{
-			pa_print(l_a, l_b);
-		}
-		else
-			pa_print(l_a, l_b);
-	}
-}
-
-void		backwards_lists_4(t_list *l_a, t_list *l_b)
-{
-	if (l_a->head->data > l_a->head->next->data && \
-			l_a->head->next->data > l_a->head->next->next->data && \
-			l_a->tail->data < l_a->head->next->next->data)
+void		list_4(t_list *l_a, t_list *l_b)
+{	
+	if(is_backwards(l_a) == 1)
 	{
 		sa_print(l_a);
 		rra_print(l_a);
 		rra_print(l_a);
 		sa_print(l_a);
+		if(is_sort(l_a, l_b))
+			exit(1);
 	}
-	else
-		push_swap(l_a, l_b);
+	if (l_a->node->data > l_a->node->next->data && \
+	l_a->node->next->data < l_a->node->next->next->data)
+		sa_print(l_a);
 }
 
-void		backwards_lists_5(t_list *l_a, t_list *l_b)
+void		list_5(t_list *l_a, t_list *l_b)
 {
 	if (l_a->head->data > l_a->head->next->data && \
 			l_a->head->next->data > l_a->head->next->next->data && \
@@ -71,18 +44,12 @@ void		backwards_lists_5(t_list *l_a, t_list *l_b)
 		ra_print(l_a);
 		ra_print(l_a);
 	}
-	else
-		push_swap(l_a, l_b);
 }
 
-void		back_wards_lists_3(t_list *l_a, t_list *l_b)
+void		list_3(t_list *l_a, t_list *l_b)
 {
-	if (l_a->head->data > l_a->head->next->data && \
-			l_a->tail->data < l_a->head->next->data)
-	{
+	if (l_a->head->data > l_a->head->next->data)
 		sa_print(l_a);
+	if(!is_sort(l_a, l_b))
 		rra_print(l_a);
-	}
-	else
-		push_swap(l_a, l_b);
 }

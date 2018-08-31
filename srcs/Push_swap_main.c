@@ -12,31 +12,38 @@
 
 #include "../includes/push_swap.h"
 
+void	decisions(int length, t_list *l_a, t_list *l_b)
+{
+	length = length - 1;
+	if (length == 5)
+		list_5(l_a, l_b);
+	else if (length == 4)
+		list_4(l_a, l_b);
+	else if (length == 3)
+		list_3(l_a, l_b);
+}
+
 int		main(int argc, char **argv)
 {
 	t_list	*l_a;
 	t_list	*l_b;
 
 	error_checker(argc, argv);
-	argv++;
 	l_a = ft_list_new();
 	l_b = ft_list_new();
+	argv++;
 	while (*argv)
 	{
 		l_a = ft_list_append(l_a, ft_atoi(*argv));
 		argv++;
 	}
-	if (argc == 6)
-		backwards_lists_5(l_a, l_b);
-	else if (argc == 5)
-		backwards_lists_4(l_a, l_b);
-	else if (argc == 4)
-		back_wards_lists_3(l_a, l_b);
+	if (is_sort(l_a, l_b))
+		return (0);
 	else
-		push_swap(l_a, l_b);
+		decisions(argc, l_a, l_b);
 	if (is_sort(l_a, l_b))
 		ok();
 	else
 		ko();
-	return (0);
 }
+

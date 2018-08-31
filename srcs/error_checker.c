@@ -61,13 +61,7 @@ void		error_checker(int argc, char **argv)
 	while (*argv)
 	{
 		if (ft_atol(*argv) > 2147483647)
-		{	if(ft_atol(*argv) == 0)
-			{
-				if(ft_strcmp(*argv, "0") || ft_strcmp(*argv, "-0"))
-				error();
-			}
 			error();
-		}
 		if ((is_not_digit(*argv)) == 1)
 			error();
 		argv++;

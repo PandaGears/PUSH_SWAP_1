@@ -14,30 +14,31 @@
 
 void		checker_p(const char *str, t_list *l_a, t_list *l_b)
 {
-	if (ft_strcmp("pa", str) == 0)
+	if (ft_strcmp(str, "pa") == 0)
 		pa(l_a, l_b);
-	else if (ft_strcmp("pb", str) == 0)
+	else if (ft_strcmp(str, "pb") == 0)
 		pb(l_a, l_b);
-	else if (ft_strcmp("ss", str) == 0)
+	else if (ft_strcmp(str, "ss") == 0)
 		ss(l_a, l_b);
-	else if (ft_strcmp("rr", str) == 0)
+	else if (ft_strcmp(str, "rr") == 0)
 		rr(l_a, l_b);
-	else if (ft_strcmp("rrr", str) == 0)
+	else if (ft_strcmp(str, "rrr") == 0)
 		rrr(l_a, l_b);
-	else if (ft_strcmp("sb", str) == 0)
-		sb(l_a);
-	else if (ft_strcmp("rb", str) == 0)
-		rb(l_a);
-	else if (ft_strcmp("rrb", str) == 0)
+	else if (ft_strcmp(str, "sb") == 0)
+		sb(l_b);
+	else if (ft_strcmp(str, "rb") == 0)
+		rb(l_b);
+	else if (ft_strcmp(str, "rrb") == 0)
 		rrb(l_a);
-	else if (ft_strcmp("sa", str) == 0)
+	else if (ft_strcmp(str, "sa") == 0)
 		sa(l_a);
-	else if (ft_strcmp("ra", str) == 0)
+	else if (ft_strcmp(str, "ra") == 0)
 		ra(l_a);
-	else if (ft_strcmp("rra", str) == 0)
+	else if (ft_strcmp(str, "rra") == 0)
 		rra(l_a);
 	else
-		error();
+		// error();
+		write(1, "YOU", 3);
 }
 
 void		checker_r(t_list *l_a, t_list *l_b)
