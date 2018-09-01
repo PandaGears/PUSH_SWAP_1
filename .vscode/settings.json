@@ -1,5 +1,9 @@
 {
 	"files.associations": {
-		"push_swap.h": "c"
+		"push_swap.h": "c",
+		"push_swap.h\u0000_swap.h": "c",
+		"push_swap.h\u0000h_swap.h": "c",
+		"push_swap.h\u0000push_swap.h": "c",
+		"push_swap.h\u0000ush_swap.h": "c"
 	}
 }

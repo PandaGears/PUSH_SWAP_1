@@ -50,6 +50,13 @@ typedef struct			s_node
 	struct s_node		*prev;
 }						t_node;
 
+typedef struct			s_elem
+{
+	int					value;
+	struct s_elem		*next;
+	struct s_elem		*prev;
+}						t_elem;
+
 typedef struct			s_list
 {
 	size_t				len;
@@ -85,7 +92,22 @@ typedef struct			s_env
 	int					len;
 	int					ret;
 	void				*argum;
+	int					index;
+	int					options;
+	int					asize;
+	int					bsize;
+	int					tot;
+	int					pivot;
+	int					choice;
+	t_elem				*a_start;
+	t_elem				*b_start;
+	t_elem				*a_end;
+	t_elem				*b_end;
 }						t_env;
+
+# define ASTA			env->a_start->value
+# define ANEX			env->a_start->next->value
+# define AEND			env->a_end->value
 
 int						ft_list_is_head(t_list *lst);
 int						ft_list_is_single(t_list *lst);

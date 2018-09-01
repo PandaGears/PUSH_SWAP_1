@@ -55,6 +55,7 @@ void				ss_print(t_list *l_a, t_list *l_b);
 void				pa_print(t_list *l_a, t_list *l_b);
 void				pb_print(t_list *l_a, t_list *l_b);
 
+void	            print_list(t_list *l_a, t_list *l_b);
 void				push_swap(t_list *l_a, t_list *l_b);
 void				error(void);
 void				ok(void);
