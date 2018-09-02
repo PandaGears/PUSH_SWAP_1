@@ -48,6 +48,7 @@ typedef struct			s_node
 	int					data;
 	struct s_node		*next;
 	struct s_node		*prev;
+	int					value;
 }						t_node;
 
 typedef struct			s_elem
@@ -60,6 +61,8 @@ typedef struct			s_elem
 typedef struct			s_list
 {
 	size_t				len;
+	struct s_list		*l_a;
+	struct s_list		*l_b;
 	struct s_list		*node;
 	struct s_list		*prev;
 	struct s_list		*data;
@@ -68,6 +71,9 @@ typedef struct			s_list
 	struct s_list		*next;
 	t_node				*head;
 	t_node				*tail;
+	int					asize;
+	int					bsize;
+	int					pivot;
 }						t_list;
 
 typedef unsigned char	t_byte;
@@ -99,15 +105,11 @@ typedef struct			s_env
 	int					tot;
 	int					pivot;
 	int					choice;
-	t_elem				*a_start;
-	t_elem				*b_start;
-	t_elem				*a_end;
-	t_elem				*b_end;
 }						t_env;
 
-# define ASTA			env->a_start->value
-# define ANEX			env->a_start->next->value
-# define AEND			env->a_end->value
+# define HEADA			l_a->head->value
+# define NEXTA			l_a->head->next->value
+# define TAILA			l_a->tail->value
 
 int						ft_list_is_head(t_list *lst);
 int						ft_list_is_single(t_list *lst);

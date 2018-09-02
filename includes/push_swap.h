@@ -55,6 +55,9 @@ void				ss_print(t_list *l_a, t_list *l_b);
 void				pa_print(t_list *l_a, t_list *l_b);
 void				pb_print(t_list *l_a, t_list *l_b);
 
+void	            pushing_to_b(t_list *l_a, t_list *l_b);
+void	            optimize_rotate(t_list *l_a, t_list *l_b);
+void	            optimize_order(t_list *l_a, t_list *l_b);
 void	            print_list(t_list *l_a, t_list *l_b);
 void				push_swap(t_list *l_a, t_list *l_b);
 void				error(void);
@@ -63,5 +66,14 @@ void				ko(void);
 void				show_usage(void);
 void				error_check(char **str);
 void				smallest_first(t_list *lst);
+
+void                front_sort(t_list *l_a, t_list *l_b);
+void                back2_sort(t_list *l_a, t_list *l_b);
+void                back_sort(t_list *l_a, t_list *l_b);
+void	            l_a_sort(t_list *lst);
+void		        optimization(t_list *l_a, t_list *l_b);
+void		        quicksort(t_list *l_a, t_list *l_b);
+
+int	                choose_pivot    (t_list *lst);
 int					is_backwards(t_list *l_a);
 #endif
