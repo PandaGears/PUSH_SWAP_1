@@ -1,6 +1,6 @@
 #include "../includes/push_swap.h"
 
-void	optimize_rotate(t_list *l_a, t_list *l_b)
+void	rotate_opt(t_list *l_a, t_list *l_b)
 {
 	int		i;
 	int		value;
@@ -24,7 +24,7 @@ void	optimize_rotate(t_list *l_a, t_list *l_b)
 			rrb_print(l_b);
 }
 
-void	optimize_order(t_list *l_a, t_list *l_b)
+void	order_opt(t_list *l_a, t_list *l_b)
 {
 	int		i;
 	t_node	*node;
@@ -46,7 +46,7 @@ void	optimize_order(t_list *l_a, t_list *l_b)
 	}
 }
 
-void	pushing_to_b(t_list *l_a, t_list *l_b)
+void	pb_opt(t_list *l_a, t_list *l_b)
 {
 	int		value;
 	int		done;
@@ -61,14 +61,14 @@ void	pushing_to_b(t_list *l_a, t_list *l_b)
 	while (node && value < node->data)
 		node = node->next;
 	if (!node && !done && ++done)
-		optimize_order(l_a, l_b);
+		order_opt(l_a, l_b);
 	node = l_b->head;
 	while (node && value > node->data)
 		node = node->next;
 	if (!node && !done && ++done)
-		optimize_order(l_a, l_b);
+		order_opt(l_a, l_b);
 	if (!done && ++done)
-		optimize_rotate(l_a, l_b);
+		rotate_opt(l_a, l_b);
 	pb_print(l_a, l_b);
 }
 
