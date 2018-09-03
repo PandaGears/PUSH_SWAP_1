@@ -18,13 +18,13 @@ void		quicksort(t_list *l_a, t_list *l_b)
 				break ;
 			while (l_a->head->data < l_a->pivot)
 				pb_opt(l_a, l_b);
-			if (l_a->head->next && HEADA > NEXTA &&
-				TAILA > l_a->pivot)
+			if (l_a->head->next && l_a->head->data > l_a->head->next->data \
+				&& l_a->tail->data > l_a->pivot)
 				sa_print(l_a);
 			(!is_sort(l_a, l_b)) ? ra_print(l_a) : 0;
 		}
 	}
-	order_opt(l_a, l_b);
+	order_opt(l_b);
 	while (l_b->head)
 		pa_print(l_a, l_b);
 }

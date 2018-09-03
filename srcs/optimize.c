@@ -29,24 +29,29 @@ void		optimization(t_list *l_a, t_list *l_b)
 {
 	while (l_a->tail->data < l_a->head->data)
 	{
-		if (HEADA > NEXTA && TAILA != NEXTA)
+		if (l_a->head->data  > l_a->head->next->data \
+		 && l_a->tail->data != l_a->head->next->data)
 			sa_print(l_a);
 		rra_print(l_a);
-		if (HEADA > NEXTA && TAILA != NEXTA)
+		if (l_a->head->data  > l_a->head->next->data \
+		&& l_a->tail->data != l_a->head->next->data)
 			sa_print(l_a);
-		while (l_a->head->next && TAILA > HEADA && TAILA < TAILA)
+		while (l_a->head->next && l_a->tail->data > l_a->head->data \
+		 && l_a->tail->data < l_a->tail->data)
 		{
-			pushing_to_b(l_a, l_b);
+			pb_opt(l_a, l_b);
 			rra_print(l_a);
-			if (HEADA > NEXTA && TAILA != NEXTA)
+			if (l_a->head->data > l_a->head->next->data \
+			&& l_a->tail->data != l_a->head->next->data)
 				sa_print(l_a);
 		}
 	}
 	while (l_b->head)
 	{
 		pa_print(l_a, l_b);
-		if (HEADA > NEXTA && TAILA != NEXTA)
+		if (l_a->head->data > l_a->head->next->data && \
+		l_a->tail->data != l_a->head->next->data)
 			sa_print(l_a);
 	}
-	second_part(l_a, l_b);
+	optimization_2(l_a, l_b);
 }

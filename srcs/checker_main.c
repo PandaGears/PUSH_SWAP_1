@@ -23,7 +23,7 @@ int		main(int argc, char **argv)
 	l_b = ft_list_new();
 	while (*argv)
 	{
-		l_a = ft_list_append(l_a, ft_atoi(*argv));
+		l_a = ft_list_append(l_a, ft_atol(*argv));
 		argv++;
 	}
 	checker_r(l_a, l_b);
