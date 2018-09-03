@@ -23,7 +23,7 @@ void				error_checker(int argc, char **argv);
 void				checker_r(t_list *l_a, t_list *l_b);
 void				bubble_sorter(t_list *lst, int size);
 void				list_5(t_list *l_a, t_list *l_b);
-void				list_4(t_list *l_a, t_list *l_b);
+void				list_4(t_list *l_a);
 void				list_3(t_list *l_a, t_list *l_b);
 
 void				swap(t_list *lst);
@@ -78,4 +78,5 @@ void		        quicksort(t_list *l_a, t_list *l_b);
 
 int	                choose_pivot    (t_list *lst);
 int					is_backwards(t_list *l_a);
+
 #endif

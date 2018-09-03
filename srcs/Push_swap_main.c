@@ -18,7 +18,7 @@ void	decisions(int length, t_list *l_a, t_list *l_b)
 	if (length == 5)
 		list_5(l_a, l_b);
 	else if (length == 4)
-		list_4(l_a, l_b);
+		list_4(l_a);
 	else if (length == 3)
 		list_3(l_a, l_b);
 }

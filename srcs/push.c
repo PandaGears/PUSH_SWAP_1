@@ -12,24 +12,20 @@
 
 #include "../includes/push_swap.h"
 
-void		push(t_list *l_a, t_list *l_b)
-{
-	ft_list_prepend(l_a, l_b->head->data);
-	ft_list_del(l_b, l_b->head);
-}
-
 void			pa(t_list *l_a, t_list *l_b)
 {
-	if (is_list(l_b))
+	if (!(l_b == NULL || l_b->head == NULL))
 	{
-		push(l_a, l_b);
+	ft_list_prepend(l_a, l_b->head->data);
+	ft_list_del(l_b, l_b->head);
 	}
 }
 
 void			pb(t_list *l_a, t_list *l_b)
 {
-	if (is_list(l_a))
+	if (!(l_a == NULL || l_a->head == NULL))
 	{
-		push(l_b, l_a);
+	ft_list_prepend(l_b, l_a->head->data);
+	ft_list_del(l_a, l_a->head);
 	}
 }

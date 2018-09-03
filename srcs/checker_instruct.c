@@ -37,8 +37,7 @@ void		checker_p(const char *str, t_list *l_a, t_list *l_b)
 	else if (ft_strcmp(str, "rra") == 0)
 		rra(l_a);
 	else
-		// error();
-		write(1, "YOU", 3);
+		error();
 }
 
 void		checker_r(t_list *l_a, t_list *l_b)

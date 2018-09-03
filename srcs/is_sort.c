@@ -32,8 +32,16 @@ int is_backwards(t_list *l_a)
 	while (node != NULL)
 	{
 		if(node->data > tmp)
-				tmp = node->data;
+		{
+			tmp = node->data;
 			node = node->next;
+		}
+		else
+		{
+			return(0);
+			exit(1);
+		}
 	}
-	return (1);
+		return (1);
+
 }
