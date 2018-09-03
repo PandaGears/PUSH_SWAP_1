@@ -35,7 +35,7 @@ void	order_opt(t_list *l_b)
 	{
 		while (node->next && node->data > node->next->data && ++i)
 			node = node->next;
-		if (!node)
+		if (node == NULL)
 			return ;
 		if (i > l_b->bsize / 2)
 			while (l_b->tail->data > l_b->head->data)
@@ -49,10 +49,10 @@ void	order_opt(t_list *l_b)
 void	pb_opt(t_list *l_a, t_list *l_b)
 {
 	int		value;
-	int		done;
+	int		i;
 	t_node	*node;
 
-	done = 0;
+	i = 0;
 	if (l_a->head && l_a->head->next)
 		if (l_a->head->data > l_a->head->next->data)
 			sa_print(l_a);
@@ -60,14 +60,14 @@ void	pb_opt(t_list *l_a, t_list *l_b)
 	value = l_a->head->data;
 	while (node && value < node->data)
 		node = node->next;
-	if (!node && !done && ++done)
+	if (!node && !i && ++i)
 		order_opt(l_b);
 	node = l_b->head;
 	while (node && value > node->data)
 		node = node->next;
-	if (!node && !done && ++done)
+	if (!node && !i && ++i)
 		order_opt(l_b);
-	if (!done && ++done)
+	if (!i && ++i)
 		rotate_opt(l_a, l_b);
 	pb_print(l_a, l_b);
 }

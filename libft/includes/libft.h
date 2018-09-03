@@ -61,8 +61,8 @@ typedef struct			s_elem
 typedef struct			s_list
 {
 	size_t				len;
-	struct s_list		*l_a;
-	struct s_list		*l_b;
+	// struct s_list		*l_a;
+	// struct s_list		*l_b;
 	struct s_list		*node;
 	struct s_list		*prev;
 	struct s_list		*data;
@@ -106,10 +106,6 @@ typedef struct			s_env
 	int					pivot;
 	int					choice;
 }						t_env;
-
-# define HEADA			l_a->head->value
-# define NEXTA			l_a->head->next->value
-# define TAILA			l_a->tail->value
 
 int						ft_list_is_head(t_list *lst);
 int						ft_list_is_single(t_list *lst);

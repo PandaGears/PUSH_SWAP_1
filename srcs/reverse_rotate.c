@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tradlof <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: hrossouw <hrossouw@student.wethinkcode.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/14 06:45:50 by tradlof           #+#    #+#             */
-/*   Updated: 2018/08/14 06:46:42 by tradlof          ###   ########.fr       */
+/*   Created: 2018/08/14 06:45:50 by hrossouw           #+#    #+#             */
+/*   Updated: 2018/09/03 12:26:11 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ void		rrr(t_list *l_a, t_list *l_b)
 	if (l_a != NULL && l_a->head != NULL && l_a->head->next != NULL)
 		reverse_rotate(l_a);
 	if (l_b != NULL && l_b->head != NULL && l_b->head->next != NULL)
-	reverse_rotate(l_b);
+		reverse_rotate(l_b);
 }

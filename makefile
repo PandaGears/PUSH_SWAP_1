@@ -13,11 +13,12 @@ OBJ_PATH_2 = ./objs/
 
 INC_PATH_2 = ./includes/
 
-SRC_NAME_1 = push_swap_main.c swap.c push.c rotate.c reverse_rotate.c push_swap.c notify.c is_sort.c error_checker.c \
-			push_swap_algos.c push_swap_print.c rotate_print.c double_print.c algo_method.c quicksort_algo.c optimize.c \
-			sorting_algo.c visual.c
-
-SRC_NAME_2 = checker_main.c swap.c push.c rotate.c reverse_rotate.c checker_instruct.c notify.c is_sort.c error_checker.c
+SRC_NAME_1 = algo_choice.c  double_print.c error_checker.c is_sort.c notify.c optimize.c \
+				optimize_2.c push_swap_algos.c push_swap_ps.c push.c push_swap_main.c rotate.c \
+				rotate_print.c reverse_rotate.c short_len.c swap.c visual.c
+			
+SRC_NAME_2 = checker_main.c swap.c push.c rotate.c reverse_rotate.c checker_instruct.c notify.c \
+				is_sort.c error_checker.c
 
 OBJ_NAME_1 = $(SRC_NAME_1:.c=.o)
 
