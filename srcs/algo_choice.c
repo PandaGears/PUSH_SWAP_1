@@ -15,3 +15,19 @@ void	decisions(int length, t_list *l_a, t_list *l_b)
 	else if (length >= 100)
 		list_100(l_a, l_b);
 }
+
+void	algos_backwards(int len, t_list *list_a, t_list *list_b)
+{
+	while (len > 3)
+	{
+		pb_print(list_a, list_b);
+		len--;
+	}
+	sa_print(list_a);
+	rra_print(list_a);
+	while (list_b->head != NULL)
+	{
+		pa_print(list_a, list_b);
+		ra_print(list_a);
+	}
+}
