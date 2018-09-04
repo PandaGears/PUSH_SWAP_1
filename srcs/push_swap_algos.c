@@ -1,18 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   push_swap_algos.c                                  :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hrossouw <hrossouw@student.wethinkcode.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/28 08:40:16 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/03 14:59:10 by hrossouw         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../includes/push_swap.h"
 
-void		quicksort(t_list *l_a, t_list *l_b)
+void	quicksort(t_list *l_a, t_list *l_b)
 {
 	t_node	*tmp;
 
@@ -31,13 +19,13 @@ void		quicksort(t_list *l_a, t_list *l_b)
 			while (l_a->head->data < l_a->pivot)
 				pb_opt(l_a, l_b);
 			if (l_a->head->next && l_a->head->data > l_a->head->next->data \
-				&& l_a->tail->data > l_a->pivot)
+					&& l_a->tail->data > l_a->pivot)
 				sa_print(l_a);
 			(!is_sort(l_a, l_b)) ? ra_print(l_a) : 0;
 		}
 	}
 	order_opt(l_b);
-	while (l_b->head)
+	while (l_b->head != NULL)
 		pa_print(l_a, l_b);
 }
 
@@ -67,20 +55,19 @@ void	l_a_sort(t_list *lst)
 	}
 }
 
-void    front_sort(t_list *l_a, t_list *l_b)
+void	front_sort(t_list *l_a, t_list *l_b)
 {
 	while (!is_sort(l_a, l_b))
 	{
 		while (l_a->head->next && l_a->head->data < l_a->head->next->data)
 			pb_print(l_a, l_b);
 		sa_print(l_a);
-		if (l_b->head && 
-        l_b->head->data > l_a->head->data)
+		if (l_b->head && l_b->head->data > l_a->head->data)
 		{
 			ra_print(l_a);
 			while (l_b->head && l_b->head->data > l_a->tail->data)
 				pa_print(l_a, l_b);
-                rra_print(l_a);
+			rra_print(l_a);
 		}
 	}
 	while (l_b->head)
@@ -121,6 +108,6 @@ void	back_sort(t_list *l_a, t_list *l_b)
 			}
 		}
 	}
-	while (l_b->head)
+	while (l_b->head != NULL)
 		pa_print(l_a, l_b);
 }

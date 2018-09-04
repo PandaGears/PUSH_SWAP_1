@@ -6,13 +6,13 @@
 /*   By: tradlof <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 07:45:16 by tradlof           #+#    #+#             */
-/*   Updated: 2018/06/30 12:10:29 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/04 09:24:28 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	nbrlen(int num)
+int		nbrlen(int num)
 {
 	int		i;
 
@@ -27,7 +27,7 @@ int	nbrlen(int num)
 	return (i);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int				len;
 	char			*str;

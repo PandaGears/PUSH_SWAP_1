@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrossouw <hrossouw@student.wethinkcode.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/14 06:49:27 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/03 12:37:34 by hrossouw         ###   ########.fr       */
+/*   Created: 2018/09/04 09:29:36 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/04 15:46:21 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,15 @@ int					checkup(int argc, char **argv);
 int					is_list(t_list *lst);
 void				error_checker(int argc, char **argv);
 
+void                backwards_5(t_list *l_a, t_list *l_b);
+void	            rand_1(t_list *l_a, t_list *l_b);
+void	            3_list_5(t_list *l_a, t_list *l_b);
 void				checker_r(t_list *l_a, t_list *l_b);
 void				bubble_sorter(t_list *lst, int size);
 void				list_5(t_list *l_a, t_list *l_b);
 void				list_4(t_list *l_a);
 void				list_3(t_list *l_a, t_list *l_b);
+void				list_100(t_list *l_a, t_list *l_b);
 
 void				swap(t_list *lst);
 void				rotate(t_list *lst);
@@ -69,26 +73,26 @@ void				ss_print(t_list *l_a, t_list *l_b);
 void				pa_print(t_list *l_a, t_list *l_b);
 void				pb_print(t_list *l_a, t_list *l_b);
 
-void	            print_list(t_list *l_a, t_list *l_b);
+void				print_list(t_list *l_a, t_list *l_b);
 void				push_swap(t_list *l_a, t_list *l_b);
 void				error(void);
 void				ok(void);
 void				ko(void);
 void				show_usage(void);
 void				error_check(char **str);
-void			 	smallest_first(t_list *lst);
+void				smallest_first(t_list *lst);
 
 void				order_opt(t_list *l_b);
 void				pb_opt(t_list *l_a, t_list *l_b);
-void                front_sort(t_list *l_a, t_list *l_b);
-void                back2_sort(t_list *l_a, t_list *l_b);
-void                back_sort(t_list *l_a, t_list *l_b);
-void	            l_a_sort(t_list *lst);
-void		        optimization(int len, t_list *l_a, t_list *l_b);
-void		        quicksort(t_list *l_a, t_list *l_b);
+void				front_sort(t_list *l_a, t_list *l_b);
+void				back2_sort(t_list *l_a, t_list *l_b);
+void				back_sort(t_list *l_a, t_list *l_b);
+void				l_a_sort(t_list *lst);
+void				optimization(int len, t_list *l_a, t_list *l_b);
+void				quicksort(t_list *l_a, t_list *l_b);
 void				decisions(int length, t_list *l_a, t_list *l_b);
 
-int	                choose_pivot(t_list *lst);
-int					is_backwards(t_list *l_a);
+int					choose_pivot(t_list *lst);
+int					is_backwards_list(t_list *list_a);
 
 #endif

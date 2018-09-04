@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tradlof <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: hrossouw <hrossouw@student.wethinkcode.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 17:03:38 by tradlof           #+#    #+#             */
-/*   Updated: 2018/08/28 09:57:18 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/04 11:01:11 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,6 @@ typedef struct			s_elem
 typedef struct			s_list
 {
 	size_t				len;
-	// struct s_list		*l_a;
-	// struct s_list		*l_b;
 	struct s_list		*node;
 	struct s_list		*prev;
 	struct s_list		*data;
@@ -126,7 +124,7 @@ t_list					*ft_list_append(t_list *lst, int value);
 t_list					*ft_list_prepend(t_list *lst, int value);
 t_list					*ft_list_del(t_list *lst, t_node *node);
 
-void					ft_print_list(t_list *lst);
+void					ft_print_list(t_list *lst1, t_list *lst2);
 void					ft_list_clear(t_list **begin_list);
 void					ft_lstdelone(t_list **alst,
 		void (*del)(void *, size_t));

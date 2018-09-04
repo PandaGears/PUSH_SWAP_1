@@ -1,7 +1,7 @@
 
 #include "../includes/push_swap.h"
 
-int			is_sort(t_list *l_a, t_list *l_b)
+int		is_sort(t_list *l_a, t_list *l_b)
 {
 	t_node	*node;
 
@@ -21,27 +21,16 @@ int			is_sort(t_list *l_a, t_list *l_b)
 		return (1);
 }
 
-
-int is_backwards(t_list *l_a)
+int		is_backwards_list(t_list *list_a)
 {
-	t_node *node;
-	int tmp;
+	t_node	*current;
 
-	node = l_a->head;
-	tmp = l_a->head->data;
-	while (node != NULL)
+	current = list_a->head;
+	while (current->data > current->next->data)
 	{
-		if(node->data > tmp)
-		{
-			tmp = node->data;
-			node = node->next;
-		}
-		else
-		{
-			return(0);
-			exit(1);
-		}
+		current = current->next;
+		if (current == list_a->tail)
+			return (1);
 	}
-		return (1);
-
+	return (0);
 }

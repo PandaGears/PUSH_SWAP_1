@@ -4,6 +4,10 @@
 		"push_swap.h\u0000_swap.h": "c",
 		"push_swap.h\u0000h_swap.h": "c",
 		"push_swap.h\u0000push_swap.h": "c",
-		"push_swap.h\u0000ush_swap.h": "c"
-	}
+		"push_swap.h\u0000ush_swap.h": "c",
+		"string": "c",
+		"string_view": "c",
+		"vector": "c"
+	},
+	"C_Cpp.errorSquiggles": "Disabled"
 }

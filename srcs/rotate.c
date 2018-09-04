@@ -1,18 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tradlof <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/14 06:43:05 by tradlof           #+#    #+#             */
-/*   Updated: 2018/08/14 06:45:45 by tradlof          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	rotate(t_list *lst)
+void		rotate(t_list *lst)
 {
 	ft_list_append(lst, lst->head->data);
 	ft_list_del(lst, lst->head);
