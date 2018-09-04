@@ -18,9 +18,9 @@ void		list_5(t_list *l_a, t_list *l_b)
 {
 	while(l_a != NULL)
 	{
-		if (is_backwards_list(l_a) == 1)
-		backwards_5(l_a, l_b)
-		else if (HEADA < NEXTA && NEXTA < NEXEXTA && \
+	//	if (is_backwards_list(l_a) == 1)
+	//	backwards_5(l_a, l_b)
+		/*else*/ if (HEADA < NEXTA && NEXTA < NEXEXTA && \
 		NEXEXTA > PREVA && PREVA > TAILA)
 		rand_1(l_a, l_b);
 		else if(HEADA < NEXTA && NEXTA < NEXEXTA && \
@@ -43,11 +43,11 @@ void		list_3(t_list *l_a, t_list *l_b)
 		else
 			ra_print(l_a);
 	}
-	else if (is_backwards_list(l_a) == 1)
-	{
-		sa_print(l_a);
-		rra_print(l_a);
-	}
+	// else if(is_backwards_list(l_a) == 1)
+	// {
+	// 	sa_print(l_a);
+	// 	rra_print(l_a);
+	// }
 }
 
 void		list_100(t_list *l_a, t_list *l_b)

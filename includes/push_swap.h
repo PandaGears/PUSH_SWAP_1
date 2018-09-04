@@ -34,6 +34,7 @@ int					checkup(int argc, char **argv);
 int					is_list(t_list *lst);
 void				error_checker(int argc, char **argv);
 
+void	            algos_backwards(int len, t_list *list_a, t_list *list_b);
 void                backwards_5(t_list *l_a, t_list *l_b);
 void	            rand_1(t_list *l_a, t_list *l_b);
 void	            3_list_5(t_list *l_a, t_list *l_b);
