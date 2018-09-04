@@ -1,3 +1,4 @@
+
 #include "../includes/push_swap.h"
 
 void	decisions(int length, t_list *l_a, t_list *l_b)
@@ -11,8 +12,6 @@ void	decisions(int length, t_list *l_a, t_list *l_b)
 		list_3(l_a, l_b);
 	else if (length < 7)
 		l_a_sort(l_a);
-	else if (length >= 10)
-		optimization(length, l_a, l_b);
 	else if (length >= 100)
-		quicksort(l_a, l_b);
+		list_100(l_a, l_b);
 }

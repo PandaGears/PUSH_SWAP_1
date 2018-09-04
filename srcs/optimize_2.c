@@ -1,3 +1,4 @@
+
 #include "../includes/push_swap.h"
 
 void	rotate_opt(t_list *l_a, t_list *l_b)
@@ -72,13 +73,12 @@ void	pb_opt(t_list *l_a, t_list *l_b)
 	pb_print(l_a, l_b);
 }
 
-int	choose_pivot(t_list *lst)
+int		choose_pivot(t_list *lst)
 {
 	int		i;
 	int		split;
 	t_node	*node_1;
-	t_node	*node_2
-    ;
+	t_node	*node_2;
 
 	split = (lst->asize <= 400) ? 2 : 7;
 	node_1 = lst->head;

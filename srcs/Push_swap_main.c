@@ -1,14 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   push_swap_main.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hrossouw <hrossouw@student.wethinkcode.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/28 08:44:18 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/03 12:29:20 by hrossouw         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
@@ -24,7 +13,6 @@ int		main(int argc, char **argv)
 	while (*argv)
 	{
 		l_a = ft_list_append(l_a, ft_atol(*argv));
-		// print_list(l_a, l_b);
 		argv++;
 	}
 	if (is_sort(l_a, l_b))
@@ -36,4 +24,3 @@ int		main(int argc, char **argv)
 	else
 		ko();
 }
-

@@ -6,7 +6,7 @@
 /*   By: tradlof <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/28 19:14:40 by tradlof           #+#    #+#             */
-/*   Updated: 2018/08/28 19:14:55 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/04 09:23:47 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 long long	ft_atol(const char *str)
 {
-	long long res;
-	long sign;
+	long long	res;
+	long		sign;
 
 	res = 0;
 	sign = 1;

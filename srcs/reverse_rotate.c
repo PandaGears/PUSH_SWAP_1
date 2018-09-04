@@ -1,18 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   reverse_rotate.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hrossouw <hrossouw@student.wethinkcode.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/14 06:45:50 by hrossouw           #+#    #+#             */
-/*   Updated: 2018/09/03 12:26:11 by hrossouw         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	reverse_rotate(t_list *lst)
+void		reverse_rotate(t_list *lst)
 {
 	ft_list_prepend(lst, lst->tail->data);
 	ft_list_del(lst, lst->tail);
