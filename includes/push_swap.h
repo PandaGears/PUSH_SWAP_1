@@ -14,6 +14,20 @@
 # define PUSH_SWAP_H
 # include "../libft/includes/libft.h"
 
+# define HEADA      l_a->head->data;
+# define NEXTA      l_a->head->next->data;
+# define NEXTEXTA   l_a->head->next->next->data;
+# define TAILA      l_a->tail->data;
+# define PREVA      l_a->tail->prev->data;
+# define PREVEVA    l_a->tail->prev->prev->data;
+
+# define HEADB      l_b->head->data;
+# define NEXTB      l_b->head->next->data;
+# define NEXTEXTB   l_b->head->next->next->data;
+# define TAILB      l_b->tail->data;
+# define PREVB      l_b->tail->prev->data;
+# define PREVEVB    l_b->tail->prev->prev->data;
+
 int					is_sort(t_list *l_a, t_list *l_b);
 int					is_not_digit(char *str);
 int					checkup(int argc, char **argv);

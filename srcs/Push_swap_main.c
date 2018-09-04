@@ -24,7 +24,6 @@ int		main(int argc, char **argv)
 	while (*argv)
 	{
 		l_a = ft_list_append(l_a, ft_atol(*argv));
-		// print_list(l_a, l_b);
 		argv++;
 	}
 	if (is_sort(l_a, l_b))
