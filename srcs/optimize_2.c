@@ -100,3 +100,32 @@ int		choose_pivot(t_list *lst)
 	}
 	return (node_1->data);
 }
+
+void	smallest_first(t_list *l_a)
+{
+	t_node	*node;
+	int		tmp;
+
+ 	tmp = l_a->head->data;
+	node = l_a->head;
+	while (node != NULL)
+	{
+		if (node->data < tmp)
+			tmp = node->data;
+		node = node->next;
+	}
+	while (HEADA != tmp)
+	{
+		if (HEADA != tmp && TAILA == tmp)
+			rra_print(l_a);
+		else if (HEADA != tmp && NEXTA == tmp)
+			sa_print(l_a);
+		else if	(HEADA != tmp && PREVA == tmp)
+		{
+			rra_print(l_a);
+			rra_print(l_a);
+		}
+ 		else
+			ra_print(l_a);
+	}
+} 

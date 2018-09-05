@@ -6,7 +6,7 @@
 /*   By: hrossouw <hrossouw@student.wethinkcode.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 09:29:36 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/04 15:46:21 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/09/04 19:54:52 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 # define PUSH_SWAP_H
 # include "../libft/includes/libft.h"
 
-# define HEADA      l_a->head->data;
-# define NEXTA      l_a->head->next->data;
-# define NEXTEXTA   l_a->head->next->next->data;
-# define TAILA      l_a->tail->data;
-# define PREVA      l_a->tail->prev->data;
-# define PREVEVA    l_a->tail->prev->prev->data;
+# define HEADA      l_a->head->data
+# define NEXTA      l_a->head->next->data
+# define NEXEXTA   l_a->head->next->next->data
+# define TAILA      l_a->tail->data
+# define PREVA      l_a->tail->prev->data
+# define PREVEVA    l_a->tail->prev->prev->data
 
-# define HEADB      l_b->head->data;
-# define NEXTB      l_b->head->next->data;
-# define NEXTEXTB   l_b->head->next->next->data;
-# define TAILB      l_b->tail->data;
-# define PREVB      l_b->tail->prev->data;
-# define PREVEVB    l_b->tail->prev->prev->data;
+# define HEADB      l_b->head->data
+# define NEXTB      l_b->head->next->data
+# define NEXTEXTB   l_b->head->next->next->data
+# define TAILB      l_b->tail->data
+# define PREVB      l_b->tail->prev->data
+# define PREVEVB    l_b->tail->prev->prev->data
 
 int					is_sort(t_list *l_a, t_list *l_b);
 int					is_not_digit(char *str);
@@ -37,12 +37,12 @@ void				error_checker(int argc, char **argv);
 void	            algos_backwards(int len, t_list *list_a, t_list *list_b);
 void                backwards_5(t_list *l_a, t_list *l_b);
 void	            rand_1(t_list *l_a, t_list *l_b);
-void	            3_list_5(t_list *l_a, t_list *l_b);
+void	            a_list_5(t_list *l_a, t_list *l_b);
 void				checker_r(t_list *l_a, t_list *l_b);
 void				bubble_sorter(t_list *lst, int size);
 void				list_5(t_list *l_a, t_list *l_b);
-void				list_4(t_list *l_a);
-void				list_3(t_list *l_a, t_list *l_b);
+void				list_4(t_list *l_a, t_list *l_b);
+void				list_3(t_list *l_a);
 void				list_100(t_list *l_a, t_list *l_b);
 
 void				swap(t_list *lst);
