@@ -81,7 +81,7 @@ void				ok(void);
 void				ko(void);
 void				show_usage(void);
 void				error_check(char **str);
-void				smallest_first(t_list *lst);
+void				smallest_first(t_list *l_a);
 
 void				order_opt(t_list *l_b);
 void				pb_opt(t_list *l_a, t_list *l_b);

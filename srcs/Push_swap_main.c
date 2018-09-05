@@ -19,8 +19,4 @@ int		main(int argc, char **argv)
 		return (0);
 	else
 		decisions(argc, l_a, l_b);
-	if (is_sort(l_a, l_b))
-		ok();
-	else
-		ko();
 }
