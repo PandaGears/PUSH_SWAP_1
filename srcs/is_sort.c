@@ -21,6 +21,22 @@ int		is_sort(t_list *l_a, t_list *l_b)
 		return (1);
 }
 
+int		is_sorted_list(t_list *l_a)
+{
+	t_node	*node;
+
+	node = l_a->head;
+	if (l_a->head->data == l_a->tail->data)
+		return (1);
+	while (node->next != NULL)
+	{
+		if (node->data > node->next->data)
+			return (0);
+		node = node->next;
+	}
+	return (1);
+}
+
 int		is_backwards_list(t_list *list_a)
 {
 	t_node	*current;

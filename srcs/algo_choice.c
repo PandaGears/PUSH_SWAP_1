@@ -20,16 +20,14 @@ void	algos_backwards(int len, t_list *list_a, t_list *list_b)
 void	decisions(int length, t_list *l_a, t_list *l_b)
 {
 	length = length - 1;
-	if (is_backwards_list(l_a) == 1)
+	if ((is_backwards_list(l_a) == 1) && length > 2)
 			algos_backwards(length, l_a, l_b);
-	else if (length == 5)
-		list_5(l_a, l_b);
-	else if (length == 4)
-		list_4(l_a, l_b);
+	else if (length == 2)
+		list_2(l_a);
 	else if (length == 3)
 		list_3(l_a);
-	else if (length < 7)
-		l_a_sort(l_a);
-	else if (length >= 100)
-		quicksort(l_a, l_b);
+	else if	(length <= 10)
+		lesser(length, l_a, l_b);
+	else if (length <= 50)
+		midder(length, l_a, l_b);
 }

@@ -13,8 +13,8 @@ OBJ_PATH_2 = ./objs/
 
 INC_PATH_2 = ./includes/
 
-SRC_NAME_1 = algo_choice.c  double_ps.c error_checker.c is_sort.c notify.c optimize.c cut_short.c \
-				optimize_2.c push_swap_algos.c push_swap_ps.c push.c push_swap_main.c rotate.c \
+SRC_NAME_1 = algo_choice.c algo_method.c double_ps.c error_checker.c is_sort.c notify.c optimize.c optimize_2.c  \
+				push_swap_algos.c push_swap_ps.c push.c push_swap_main.c rotate.c \
 				rotate_ps.c reverse_rotate.c short_len.c swap.c
 			
 SRC_NAME_2 = checker_main.c swap.c push.c rotate.c reverse_rotate.c checker_instruct.c notify.c \
@@ -41,8 +41,8 @@ CC = gcc $(CFLAGS)
 CFLAGS = -Wall -Wextra -Werror
 
 
-
 all: $(NAME_1) $(NAME_2)
+
 
 $(NAME_1): $(OBJ_1) $(INC_PATH_1)
 	@make -C./libft/

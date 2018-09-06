@@ -28,7 +28,6 @@ static void	optimization_2(t_list *l_a, t_list *l_b)
 
 void		optimization(int len, t_list *l_a, t_list *l_b)
 {
-	len = len - 1;
 	while (l_a->tail->data < l_a->head->data)
 	{
 		if (l_a->head->data > l_a->head->next->data && len > 2)

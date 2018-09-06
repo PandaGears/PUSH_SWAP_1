@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tradlof <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: hrossouw <hrossouw@student.wethinkcode.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/14 06:46:47 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/04 09:12:41 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/05 17:00:59 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,22 @@ int		is_list(t_list *lst)
 void	swap(t_list *lst)
 {
 	t_node	*node;
-
+	t_node	*current;
+	current = lst->head->next;
 	node = lst->head;
 	lst->head = node->next;
 	lst->head->prev = NULL;
 	node->prev = lst->head;
 	node->next = lst->head->next;
 	lst->head->next = node;
+	
+	current = lst->head;
+	while (current->next != NULL)
+	{
+		current = current->next;
+		if (current->next == NULL)
+			lst->tail = current;
+	}
 }
 
 void	sa(t_list *lst)

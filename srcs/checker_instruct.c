@@ -35,4 +35,5 @@ void		checker_r(t_list *l_a, t_list *l_b)
 
 	while (get_next_line(0, &str))
 		checker_p(str, l_a, l_b);
+		ft_print_list(l_a, l_b);		
 }
