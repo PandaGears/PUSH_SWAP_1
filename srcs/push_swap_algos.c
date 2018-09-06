@@ -16,10 +16,10 @@ void	quicksort(t_list *l_a, t_list *l_b)
 				tmp = tmp->next;
 			if (!tmp)
 				break ;
-			while (l_a->head->data < l_a->pivot)
+			while (HEADA < l_a->pivot)
 				pb_opt(l_a, l_b);
-			if (l_a->head->next && l_a->head->data > l_a->head->next->data \
-					&& l_a->tail->data > l_a->pivot)
+			if (l_a->head->next && HEADA > NEXTA \
+					&& TAILA > l_a->pivot)
 				sa_print(l_a);
 			(!is_sort(l_a, l_b)) ? ra_print(l_a) : 0;
 		}
@@ -59,13 +59,13 @@ void	front_sort(t_list *l_a, t_list *l_b)
 {
 	while (!is_sort(l_a, l_b))
 	{
-		while (l_a->head->next && l_a->head->data < l_a->head->next->data)
+		while (l_a->head->next && HEADA < NEXTA)
 			pb_print(l_a, l_b);
 		sa_print(l_a);
-		if (l_b->head && l_b->head->data > l_a->head->data)
+		if (l_b->head && HEADB > HEADA)
 		{
 			ra_print(l_a);
-			while (l_b->head && l_b->head->data > l_a->tail->data)
+			while (l_b->head && HEADB > TAILA)
 				pa_print(l_a, l_b);
 			rra_print(l_a);
 		}
@@ -76,12 +76,12 @@ void	front_sort(t_list *l_a, t_list *l_b)
 
 void	back_sort2(t_list *l_a, t_list *l_b)
 {
-	if (l_a->head->data > l_a->head->next->data)
+	if (HEADA > NEXTA)
 		sa_print(l_a);
-	if (l_b->head && l_b->head->data > l_a->head->data)
+	if (l_b->head && HEADB > HEADA)
 	{
 		ra_print(l_a);
-		while (l_b->head && l_b->head->data > l_a->tail->data)
+		while (l_b->head && HEADB > TAILA)
 			pa_print(l_a, l_b);
 		rra_print(l_a);
 	}
@@ -91,17 +91,17 @@ void	back_sort(t_list *l_a, t_list *l_b)
 {
 	while (!is_sort(l_a, l_b))
 	{
-		while (l_a->head->data < l_a->tail->data)
+		while (HEADA < TAILA)
 		{
 			back_sort2(l_a, l_b);
 			pb_print(l_a, l_b);
 		}
-		while (l_a->tail->data < l_a->head->data)
+		while (TAILA < HEADA)
 		{
-			while (l_b->head && l_b->head->data > l_a->tail->data)
+			while (l_b->head && HEADB > TAILA)
 				pa_print(l_a, l_b);
 			rra_print(l_a);
-			while (l_a->head->data < l_a->tail->data)
+			while (HEADA < TAILA)
 			{
 				back_sort2(l_a, l_b);
 				pb_print(l_a, l_b);

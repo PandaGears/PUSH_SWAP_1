@@ -54,15 +54,17 @@ void		midder(int len, t_list *l_a, t_list *l_b)
 	len2 = 0;
 	while (len > 3)
 	{
-		if (l_a->head->data < l_a->head->next->data)
+		if (HEADA < NEXTA)
 			pb_print(l_a, l_b);
 		else
 		{	
 			smallest_first(l_a);
 			pb_print(l_a, l_b);
-			if (HEADB < NEXTB)
+			if (HEADB < NEXTB  && HEADA > NEXTA)
 				ss_print(l_a, l_b);
-			else
+			else if (HEADB > NEXTB)
+				sb_print(l_b);
+			else if(HEADA > NEXTA)
 				sa_print(l_a);
 		}
 		len--;
