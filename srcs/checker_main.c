@@ -15,7 +15,7 @@ int		main(int argc, char **argv)
 		l_a = ft_list_append(l_a, ft_atol(*argv));
 		argv++;
 	}
-	checker_r(l_a, l_b);
+	checker_r(l_a, l_b);	
 	if (is_sort(l_a, l_b))
 		ok();
 	else

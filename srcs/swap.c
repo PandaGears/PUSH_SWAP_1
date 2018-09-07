@@ -1,14 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hrossouw <hrossouw@student.wethinkcode.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/14 06:46:47 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/05 17:00:59 by hrossouw         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
@@ -23,7 +12,7 @@ void	swap(t_list *lst)
 {
 	t_node	*node;
 	t_node	*current;
-	current = lst->head->next;
+	
 	node = lst->head;
 	lst->head = node->next;
 	lst->head->prev = NULL;
@@ -54,8 +43,8 @@ void	sb(t_list *lst)
 
 void	ss(t_list *l_a, t_list *l_b)
 {
-	if (l_a != NULL && l_a->head != NULL && l_a->head->next != NULL)
+	if (is_list(l_a) == 1)
 		sa(l_a);
-	if (l_b != NULL && l_b->head != NULL && l_b->head->next != NULL)
+	if (is_list(l_b)== 1)
 		sb(l_b);
 }

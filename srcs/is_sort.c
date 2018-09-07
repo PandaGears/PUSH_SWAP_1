@@ -4,8 +4,10 @@
 int		is_sort(t_list *l_a, t_list *l_b)
 {
 	t_node	*node;
-
-	node = l_a->head;
+	if (l_a->head != NULL)
+		node = l_a->head;
+	else
+		return (0);
 	if (l_a->head->data == l_a->tail->data)
 		if (l_b->head == NULL)
 			return (1);

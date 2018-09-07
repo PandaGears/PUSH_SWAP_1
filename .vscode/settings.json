@@ -9,7 +9,22 @@
 		"string_view": "c",
 		"vector": "c",
 		"__locale": "c",
-		"__string": "c"
+		"__string": "c",
+		"ostream": "c",
+		"list": "c",
+		"__bit_reference": "c",
+		"algorithm": "c",
+		"bitset": "c",
+		"chrono": "c",
+		"map": "c",
+		"set": "c",
+		"__split_buffer": "c",
+		"__tree": "c",
+		"deque": "c",
+		"initializer_list": "c",
+		"iterator": "c",
+		"queue": "c",
+		"utility": "c"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }

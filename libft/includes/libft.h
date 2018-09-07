@@ -124,7 +124,7 @@ t_list					*ft_list_append(t_list *lst, int value);
 t_list					*ft_list_prepend(t_list *lst, int value);
 t_list					*ft_list_del(t_list *lst, t_node *node);
 
-void					ft_print_list(t_list *lst1, t_list *lst2);
+void					ft_print_list(t_list *lst1);
 void					ft_list_clear(t_list **begin_list);
 void					ft_lstdelone(t_list **alst,
 		void (*del)(void *, size_t));
@@ -205,6 +205,7 @@ void					ft_swap(int *a, int *b);
 char					*ft_itoa(int n);
 int						ft_atoi(const char *str);
 
+int						ft_amount_of_words(char const *s, char c);
 int						ft_countwords(char const *str, char c);
 int						get_next_line(const int fd, char **line);
 

@@ -12,11 +12,11 @@ int		main(int argc, char **argv)
 	argv++;
 	while (*argv)
 	{
-		l_a = ft_list_append(l_a, ft_atol(*argv));
+		l_a = ft_list_append(l_a, ft_atoi(*argv));
 		argv++;
 	}
 	if (is_sort(l_a, l_b))
 		return (0);
 	else
-		decisions(argc, l_a, l_b);
+		decisions(l_a, l_b);
 }

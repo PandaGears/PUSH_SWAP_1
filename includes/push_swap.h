@@ -31,9 +31,12 @@ void				show_usage(void);
 void	            algos_backwards(int len, t_list *list_a, t_list *list_b);
 void				checker_r(t_list *l_a, t_list *l_b);
 void				bubble_sorter(t_list *lst, int size);
+void				print_stacks(t_list *l_a, t_list *l_b);
 
+void				larger(int len, t_list *l_a, t_list *l_b);
 void				midder(int len, t_list *list_a, t_list *list_b);
 void				lesser(int len, t_list *l_a, t_list *l_b);
+void				list_4(int len, t_list *l_a, t_list *l_b);
 void				list_3(t_list *l_a);
 void				list_2(t_list *l_a);
 
@@ -65,23 +68,25 @@ void				ss_print(t_list *l_a, t_list *l_b);
 void				pa_print(t_list *l_a, t_list *l_b);
 void				pb_print(t_list *l_a, t_list *l_b);
 
-void				ft_print_list(t_list *l_a, t_list *l_b);
-void				smallest_first(t_list *l_a);
+void				smallest_first_fifth(int len, t_list *l_a, t_list *l_b);
+void				smallest_first(int len, t_list *l_a);
+void				biggest_first(int len, t_list *list);
 
-void				order_opt(t_list *l_b);
-void				pb_opt(t_list *l_a, t_list *l_b);
-void				front_sort(t_list *l_a, t_list *l_b);
-void				back2_sort(t_list *l_a, t_list *l_b);
-void				back_sort(t_list *l_a, t_list *l_b);
-void				l_a_sort(t_list *lst);
-void				optimization(int len, t_list *l_a, t_list *l_b);
-void				quicksort(t_list *l_a, t_list *l_b);
+void				decisions(t_list *l_a, t_list *l_b);
 
-void				decisions(int length, t_list *l_a, t_list *l_b);
-
-void				is_maximum(t_list *l_a);
+int					find_val_limit(int len, int smallest, t_list *list);
+int					biggest_ident(t_list *lst);
+int					smallest_ident(t_list *l_a);
+int					is_minimum(t_list *lst);
+int					is_maximum(t_list *l_a);
 int					choose_pivot(t_list *lst);
 int					is_backwards_list(t_list *list_a);
 int					half_list(int len);
-
+int					fifth_list(int len);
+void				move_up_a(int smallest, int len, \
+int smallest_pos, t_list *lst);
+void				move_up_b(int size, int len, int pos, t_list *lst);
+int					find_list_length(t_list *list);
+t_list				*get_args(int len, char **argv);
+void				print_stacks(t_list *la, t_list *lb);
 #endif
