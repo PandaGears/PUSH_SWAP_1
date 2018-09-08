@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 14:12:46 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/08 16:17:39 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/08 17:59:44 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int			half_list(int len)
 		div = len / 2;
 	else
 	{
-		len = len - 1;
+		len = len + 1;
 		div = len / 2;
 	}
 	return (div);

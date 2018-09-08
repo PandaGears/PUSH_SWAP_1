@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checker_main.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/08 17:44:15 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/08 17:53:27 by tradlof          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include "../includes/push_swap.h"
 
@@ -15,7 +27,7 @@ int		main(int argc, char **argv)
 		l_a = ft_list_append(l_a, ft_atol(*argv));
 		argv++;
 	}
-	checker_r(l_a, l_b);	
+	checker_r(l_a, l_b);
 	if (is_sort(l_a, l_b))
 		ok();
 	else

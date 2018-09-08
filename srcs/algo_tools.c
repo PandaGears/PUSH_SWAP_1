@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   algo_tools.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/08 17:43:22 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/08 17:59:40 by tradlof          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include "../includes/push_swap.h"
 
@@ -7,7 +19,7 @@ void	smallest_first(int len, t_list *l_a)
 	int		smallest_pos;
 
 	smallest = is_minimum(l_a);
-	smallest_pos = smallest_ident(l_a);
+	smallest_pos = is_smallest_pos(l_a);
 	move_up_a(smallest, len, smallest_pos, l_a);
 }
 
@@ -48,7 +60,7 @@ void	biggest_first(int len, t_list *list)
 	len = fifth_list(len);
 	node = list->head;
 	biggest = is_maximum(list);
-	biggest_pos = biggest_ident(list);
+	biggest_pos = is_biggest_pos(list);
 	move_up_b(biggest, len, biggest_pos, list);
 }
 
@@ -74,7 +86,7 @@ void	move_up_b(int size, int len, int pos, t_list *lst)
 				rrb_print(lst);
 			else if (pos <= half)
 				rb_print(lst);
-			len++;
+			// len++;
 		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 14:55:51 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/08 14:56:04 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/08 17:37:04 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,8 +87,8 @@ void				biggest_first(int len, t_list *list);
 void				decisions(t_list *l_a, t_list *l_b);
 
 int					find_val_limit(int len, int smallest, t_list *list);
-int					biggest_ident(t_list *lst);
-int					smallest_ident(t_list *l_a);
+int					is_biggest_pos(t_list *lst);
+int					is_smallest_pos(t_list *l_a);
 int					is_minimum(t_list *lst);
 int					is_maximum(t_list *l_a);
 int					choose_pivot(t_list *lst);

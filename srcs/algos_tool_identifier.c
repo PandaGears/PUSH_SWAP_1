@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 15:10:02 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/08 15:10:19 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/08 17:37:06 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	is_minimum(t_list *lst)
 	return (minim);
 }
 
-int	smallest_ident(t_list *lst)
+int	is_smallest_pos(t_list *lst)
 {
 	t_node	*node;
 	int		smallest;
@@ -61,7 +61,7 @@ int	smallest_ident(t_list *lst)
 	return (smallest_pos);
 }
 
-int	biggest_ident(t_list *lst)
+int	is_biggest_pos(t_list *lst)
 {
 	t_node	*node;
 	int		biggest;
