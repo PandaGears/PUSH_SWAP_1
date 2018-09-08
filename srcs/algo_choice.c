@@ -34,6 +34,6 @@ void	decisions(t_list *l_a, t_list *l_b)
 		lesser(length, l_a, l_b);
 	else if (length <= 100)
 		midder(length, l_a, l_b);
-	else
+	else if (length > 100)
 		larger(length, l_a, l_b);
 }

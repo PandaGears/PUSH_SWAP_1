@@ -23,12 +23,13 @@ int					is_not_digit(char *str);
 int					checkup(int argc, char **argv);
 int					is_list(t_list *lst);
 void				error_checker(int argc, char **argv);
+int					error_check(char **argv);
 void				error(void);
 void				ok(void);
 void				ko(void);
 void				show_usage(void);
 
-void	            algos_backwards(int len, t_list *list_a, t_list *list_b);
+void				algos_backwards(int len, t_list *list_a, t_list *list_b);
 void				checker_r(t_list *l_a, t_list *l_b);
 void				bubble_sorter(t_list *lst, int size);
 void				print_stacks(t_list *l_a, t_list *l_b);

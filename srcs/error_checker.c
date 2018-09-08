@@ -56,3 +56,18 @@ void		error_checker(int argc, char **argv)
 		argv++;
 	}
 }
+
+int		error_check(char **argv)
+{
+	// if ((dup_check(argc, argv)) == 1)
+	// 	error();
+	while (*argv)
+	{
+		if (ft_atol(*argv) > 2147483647 || ft_atol(*argv) < -2147483647)
+			return (0);
+		if ((is_not_digit(*argv)) == 1)
+			return (0);
+		argv++;
+	}
+	return (1);
+}

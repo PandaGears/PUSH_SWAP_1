@@ -2,24 +2,29 @@
 
 t_list		*get_args(int len, char **argv)
 {
-	t_list	*ret;
+	t_list	*list;
 	char	**split;
 	int		i;
 	int		j;
 
+	len = 0;
 	i = 0;
-	ret = ft_list_new();
-	while (++i < len)
+	list = NULL; //ft_list_new();
+	while (argv[i])
 	{
-		j = -1;
 		split = ft_strsplit(argv[i], ' ');
-		while (split[++j] != NULL)
+		j = 0;
+		while (argv[j])
 		{
-			printf("Split [%d]%s \n", j, split[j]);
-			ret = ft_list_append(ret, ft_atoi(split[j]));
+			if (error_check(argv) == 1)
+				list = ft_list_append(list, ft_atol(split[j]));
+			else 
+				error();
+			j++;
 		}
+		i++;
+		len++;
 		ft_strdel(split);
 	}
-	ft_print_list(ret);
-	return (ret);
+	return (0);
 }

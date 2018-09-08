@@ -3,21 +3,18 @@
 
 void	smallest_first(int len, t_list *l_a)
 {
-	// t_node	*node;
 	int		smallest;
 	int		smallest_pos;
 
-	// node = list->head;
 	smallest = is_minimum(l_a);
 	smallest_pos = smallest_ident(l_a);
-	// while (list->head->data != smallest)
-		move_up_a(smallest, len, smallest_pos, l_a);
+	move_up_a(smallest, len, smallest_pos, l_a);
 }
 
 void	move_up_a(int size, int len, int pos, t_list *lst)
 {
 	int half;
-	
+
 	half = half_list(len);
 	while (lst->head->data != size)
 	{
@@ -35,7 +32,7 @@ void	move_up_a(int size, int len, int pos, t_list *lst)
 		else
 		{
 			if (pos > half)
-				rra_print(lst);
+				ra_print(lst);
 			else if (pos <= half)
 				ra_print(lst);
 		}
@@ -52,8 +49,7 @@ void	biggest_first(int len, t_list *list)
 	node = list->head;
 	biggest = is_maximum(list);
 	biggest_pos = biggest_ident(list);
-//	while (list->head->data != biggest)
-		move_up_b(biggest, len, biggest_pos, list);
+	move_up_b(biggest, len, biggest_pos, list);
 }
 
 void	move_up_b(int size, int len, int pos, t_list *lst)

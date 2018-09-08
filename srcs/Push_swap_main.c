@@ -3,20 +3,27 @@
 
 int		main(int argc, char **argv)
 {
-	t_list	*l_a;
-	t_list	*l_b;
+	t_list	*list_a;
+	t_list	*list_b;
+	// t_list	*args;
 
-	error_checker(argc, argv);
-	l_a = ft_list_new();
-	l_b = ft_list_new();
-	argv++;
-	while (*argv)
+	if (argc > 1)
 	{
-		l_a = ft_list_append(l_a, ft_atoi(*argv));
+		// args = get_args(argc, argv);
+		error_checker(argc, argv);
+		list_a = ft_list_new();
+		list_b = ft_list_new();
 		argv++;
+		while (*argv)
+		{
+			list_a = ft_list_append(list_a, ft_atoi(*argv));
+			argv++;
+		}
+		if (is_sort(list_a, list_b))
+			exit(1);
+		else
+			decisions(list_a, list_b);
 	}
-	if (is_sort(l_a, l_b))
-		return (0);
 	else
-		decisions(l_a, l_b);
+		exit(1);
 }
