@@ -15,10 +15,8 @@ void	move_up_a(int size, int len, int pos, t_list *lst)
 {
 	int half;
 
-	half = half_list(len);
 	while (lst->head->data != size)
 	{
-		half = half_list(len);
 		if (lst->head->data != size && lst->tail->data == size)
 			rra_print(lst);
 		else if (lst->head->data != size && lst->head->next->data == size && \
@@ -31,10 +29,12 @@ void	move_up_a(int size, int len, int pos, t_list *lst)
 		}
 		else
 		{
-			if (pos < half)
+			half = half_list(len);
+			if (pos > half)
+				rra_print(lst);
+			else if (pos <= half)
 				ra_print(lst);
-			else if (pos >= half)
-				ra_print(lst);
+			len++;
 		}
 	}
 }
@@ -74,6 +74,7 @@ void	move_up_b(int size, int len, int pos, t_list *lst)
 				rrb_print(lst);
 			else if (pos <= half)
 				rb_print(lst);
+			len++;
 		}
 	}
 }
