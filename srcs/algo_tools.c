@@ -31,9 +31,9 @@ void	move_up_a(int size, int len, int pos, t_list *lst)
 		}
 		else
 		{
-			if (pos > half)
+			if (pos < half)
 				ra_print(lst);
-			else if (pos <= half)
+			else if (pos >= half)
 				ra_print(lst);
 		}
 	}

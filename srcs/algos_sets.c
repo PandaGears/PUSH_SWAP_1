@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   algos_sets.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/08 14:12:46 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/08 15:11:04 by tradlof          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 void		list_2(t_list *l_a)
@@ -35,12 +47,12 @@ void		list_4(int len, t_list *l_a, t_list *l_b)
 		sa_print(l_a);
 	}
 	else
-		lesser(len, l_a, l_b); 
+		lesser(len, l_a, l_b);
 }
 
 int			half_list(int len)
 {
-	int div;
+	int		div;
 
 	if ((len % 2 == 0) && len)
 		div = len / 2;
@@ -52,9 +64,10 @@ int			half_list(int len)
 	return (div);
 }
 
-int		fifth_list(int len)
+int			fifth_list(int len)
 {
-	int div;
+	int		div;
+
 	if ((len % 5 == 0) && len)
 		div = len / 5;
 	else

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_arg.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/08 14:13:07 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/08 14:13:09 by tradlof          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 t_list		*get_args(int len, char **argv)
@@ -9,7 +21,7 @@ t_list		*get_args(int len, char **argv)
 
 	len = 0;
 	i = 0;
-	list = NULL; //ft_list_new();
+	list = NULL;
 	while (argv[i])
 	{
 		split = ft_strsplit(argv[i], ' ');
@@ -18,7 +30,7 @@ t_list		*get_args(int len, char **argv)
 		{
 			if (error_check(argv) == 1)
 				list = ft_list_append(list, ft_atol(split[j]));
-			else 
+			else
 				error();
 			j++;
 		}

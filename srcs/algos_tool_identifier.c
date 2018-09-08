@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   algos_tool_identifier.c                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/08 15:10:02 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/08 15:10:19 by tradlof          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 int	is_maximum(t_list *lst)
-{	
+{
 	t_node	*maxim;
 	int		max;
 
@@ -18,7 +30,7 @@ int	is_maximum(t_list *lst)
 
 int	is_minimum(t_list *lst)
 {
-	t_node *node;
+	t_node	*node;
 	int		minim;
 
 	node = lst->head;
@@ -34,7 +46,7 @@ int	is_minimum(t_list *lst)
 
 int	smallest_ident(t_list *lst)
 {
-	t_node 	*node;
+	t_node	*node;
 	int		smallest;
 	int		smallest_pos;
 
@@ -49,7 +61,7 @@ int	smallest_ident(t_list *lst)
 	return (smallest_pos);
 }
 
-int		biggest_ident(t_list *lst)
+int	biggest_ident(t_list *lst)
 {
 	t_node	*node;
 	int		biggest;
@@ -59,9 +71,9 @@ int		biggest_ident(t_list *lst)
 	biggest = lst->head->data;
 	biggest_pos = 1;
 	while (node != NULL)
-		{
-			biggest = node->data;
-			biggest_pos++;
-		}
+	{
+		biggest = node->data;
+		biggest_pos++;
+	}
 	return (biggest_pos);
 }
