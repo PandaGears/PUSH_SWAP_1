@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 14:12:46 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/08 17:59:44 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/10 06:56:25 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,13 +68,15 @@ int			fifth_list(int len)
 {
 	int		div;
 
+	div = 0;
 	if ((len % 5 == 0) && len)
 		div = len / 5;
 	else
 	{
-		while (len % 5 != 0)
-			len = len - 1;
-		div = len / 5;
+		if (len % 5 < 3)
+			div = len - (len % 5);
+		else if (len % 5 >= 3)
+			div = len + (5 - (len % 5));
 	}
 	return (div);
 }

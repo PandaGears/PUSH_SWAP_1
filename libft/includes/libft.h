@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hrossouw <hrossouw@student.wethinkcode.    +#+  +:+       +#+        */
+/*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 17:03:38 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/04 11:01:11 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/09/10 14:19:08 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define BUFF_SIZE 1
+# define BUFF_SIZE 32
 
 # include <limits.h>
 # include <stdarg.h>

@@ -24,7 +24,8 @@
 		"initializer_list": "c",
 		"iterator": "c",
 		"queue": "c",
-		"utility": "c"
+		"utility": "c",
+		"sstream": "c"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }

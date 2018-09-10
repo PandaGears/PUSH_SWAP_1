@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 17:43:22 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/08 17:59:40 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/10 16:46:58 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,31 +23,18 @@ void	smallest_first(int len, t_list *l_a)
 	move_up_a(smallest, len, smallest_pos, l_a);
 }
 
-void	move_up_a(int size, int len, int pos, t_list *lst)
+void	move_up_a(int size, int len, int pos, t_list *l_a)
 {
-	int half;
-
-	while (lst->head->data != size)
+	while (HEADA != size)
 	{
-		if (lst->head->data != size && lst->tail->data == size)
-			rra_print(lst);
-		else if (lst->head->data != size && lst->head->next->data == size && \
-		lst->head->next->next->data > lst->head->data)
-			sa_print(lst);
-		else if (lst->head->data != size && lst->tail->prev->data == size)
-		{
-			rra_print(lst);
-			rra_print(lst);
-		}
+		if (HEADA != size && TAILA == size)
+			rra_print(l_a);
+		else if (HEADA != size && NEXTA == size && NEXEXTA > HEADA)
+			sa_print(l_a);
+		else if (HEADA != size && PREVA == size)
+			combo_1a(l_a);
 		else
-		{
-			half = half_list(len);
-			if (pos > half)
-				rra_print(lst);
-			else if (pos <= half)
-				ra_print(lst);
-			len++;
-		}
+			half_path_a(len, l_a, pos, size);
 	}
 }
 
@@ -64,29 +51,29 @@ void	biggest_first(int len, t_list *list)
 	move_up_b(biggest, len, biggest_pos, list);
 }
 
-void	move_up_b(int size, int len, int pos, t_list *lst)
+void	move_up_b(int size, int len, int pos, t_list *l_b)
 {
 	int half;
 
-	half = half_list(len);
-	while (lst->head->data != size)
+	while (HEADB != size)
 	{
-		if (lst->head->data != size && lst->tail->data == size)
-			rrb_print(lst);
-		else if (lst->head->data != size && lst->head->next->data == size)
-			sb_print(lst);
-		else if (lst->head->data != size && lst->tail->prev->data == size)
+		if (HEADB != size && TAILB == size)
+			rrb_print(l_b);
+		else if (HEADB != size && NEXTB == size && NEXEXTB > HEADB)
+			sb_print(l_b);
+		else if (HEADB != size && PREVB == size)
 		{
-			rrb_print(lst);
-			rrb_print(lst);
+			rrb_print(l_b);
+			rrb_print(l_b);
 		}
 		else
 		{
+			half = half_list(len);
 			if (pos > half)
-				rrb_print(lst);
+				rrb_print(l_b);
 			else if (pos <= half)
-				rb_print(lst);
-			// len++;
+				rb_print(l_b);
+			len++;
 		}
 	}
 }

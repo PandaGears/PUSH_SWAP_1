@@ -8,7 +8,6 @@ void		ft_print_list(t_list *lst1)
 	if (lst1 != NULL)
 	{
 		tmp = lst1->head;
-		ft_putstr(CYN"stack_a:"NRM);
 		while (tmp != NULL)
 		{
 			ft_putnbr(tmp->data);

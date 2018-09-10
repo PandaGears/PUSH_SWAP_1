@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap_main.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/10 12:30:12 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/10 15:43:03 by tradlof          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include "../includes/push_swap.h"
 
@@ -5,12 +17,12 @@ int		main(int argc, char **argv)
 {
 	t_list	*list_a;
 	t_list	*list_b;
-	// t_list	*args;
+	t_list	*args;
 
 	if (argc > 1)
 	{
-		// args = get_args(argc, argv);
 		error_checker(argc, argv);
+		args = get_args(argc, argv);
 		list_a = ft_list_new();
 		list_b = ft_list_new();
 		argv++;

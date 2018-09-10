@@ -3,49 +3,69 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tradlof <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/30 17:45:30 by tradlof           #+#    #+#             */
-/*   Updated: 2018/06/30 17:45:32 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/10 15:09:02 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-static int		ft_strclen(char const *s, char c)
+static int		ft_cntwrd(const char *s, char c)
 {
-	int		i;
+	int	i;
+	int	cntr;
 
 	i = 0;
-	while (s[i] != c && s[i])
-		i++;
-	return (i);
+	cntr = 0;
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i] != '\0')
+			cntr++;
+		while (s[i] && (s[i] != c))
+			i++;
+	}
+	return (cntr);
 }
 
-char		**ft_strsplit(char const *s, char c)
+static char		*ft_strndup(const char *s, size_t n)
 {
-	int		w_len;
-	int		w_count;
+	char	*str;
+
+	str = (char *)malloc(sizeof(char) * n + 1);
+	if (str == NULL)
+		return (NULL);
+	str = ft_strncpy(str, (char *)s, n);
+	str[n] = '\0';
+	return (str);
+}
+
+char			**ft_strsplit(char const *s, char c)
+{
 	int		i;
-	char	**full;
+	int		j;
+	int		k;
+	char	**tab;
 
 	i = 0;
-	if (!s)
+	k = 0;
+	if (s == NULL)
 		return (NULL);
-	w_count = ft_amount_of_words(s, c);
-	full = (char**)malloc(sizeof(char*) * (w_count + 1));
-	if (!full)
+	if (!(tab = (char **)malloc(sizeof(char *) * (ft_cntwrd(s, c)) + 1)))
 		return (NULL);
-	while (*s == c)
-		s++;
-	while (*s)
+	while (s[i])
 	{
-		w_len = ft_strclen(s, c);
-		full[i++] = ft_strsub(s, 0, w_len);
-		s += w_len;
-		while (*s && *s == c)
-			s++;
+		while (s[i] == c)
+			i++;
+		j = i;
+		while (s[i] && s[i] != c)
+			i++;
+		if (i > j)
+			tab[k++] = ft_strndup(s + j, i - j);
 	}
-	full[i] = NULL;
-	return (full);
+	tab[k] = (NULL);
+	return (tab);
 }

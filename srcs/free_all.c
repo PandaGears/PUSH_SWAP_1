@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_main.c                                     :+:      :+:    :+:   */
+/*   free_all.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/08 17:44:15 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/10 06:47:18 by tradlof          ###   ########.fr       */
+/*   Created: 2018/09/10 14:48:59 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/10 15:40:55 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../includes/push_swap.h"
 
-int		main(int argc, char **argv)
+void		free_list(t_list *lst)
 {
-	t_list	*l_a;
-	t_list	*l_b;
+	t_list	*tmp;
 
-	error_checker(argc, argv);
-	argv++;
-	l_a = ft_list_new();
-	l_b = ft_list_new();
-	while (*argv)
+	while (lst != NULL)
 	{
-		l_a = ft_list_append(l_a, ft_atol(*argv));
-		argv++;
+		tmp = lst->next;
+		free(lst);
+		lst = tmp;
 	}
-	checker_r(l_a, l_b);
-	if (is_sort(l_a, l_b))
-		ok();
-	else
-		ko();
 }

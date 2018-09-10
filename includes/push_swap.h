@@ -1,14 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/08 14:55:51 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/08 17:37:04 by tradlof          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
@@ -21,9 +10,16 @@
 # define PREVA      l_a->tail->prev->data
 # define PREVEVA    l_a->tail->prev->prev->data
 
+# define HEAD		lst->head->data
+# define NEXT		lst->head->next->data
+# define NEXEXT		lst->head->next->next->data
+# define TAIL		lst->tail->data
+# define PREV		lst->tail->prev->data
+# define PREVEV		lst->tail->prev->prev->data
+
 # define HEADB      l_b->head->data
 # define NEXTB      l_b->head->next->data
-# define NEXTEXTB   l_b->head->next->next->data
+# define NEXEXTB   l_b->head->next->next->data
 # define TAILB      l_b->tail->data
 # define PREVB      l_b->tail->prev->data
 # define PREVEVB    l_b->tail->prev->prev->data
@@ -31,10 +27,10 @@
 int					is_sorted_list(t_list *l_a);
 int					is_sort(t_list *l_a, t_list *l_b);
 int					is_not_digit(char *str);
-int					checkup(int argc, char **argv);
+int					dup_check(int argc, char **argv);
 int					is_list(t_list *lst);
 void				error_checker(int argc, char **argv);
-int					error_check(char **argv);
+int					error_check(int argc, char **argv);
 void				error(void);
 void				ok(void);
 void				ko(void);
@@ -85,12 +81,14 @@ void				smallest_first(int len, t_list *l_a);
 void				biggest_first(int len, t_list *list);
 
 void				decisions(t_list *l_a, t_list *l_b);
-
+void				combo_2a(t_list *lst);
+void				combo_1a(t_list *lst);
 int					find_val_limit(int len, int smallest, t_list *list);
 int					is_biggest_pos(t_list *lst);
 int					is_smallest_pos(t_list *l_a);
 int					is_minimum(t_list *lst);
 int					is_maximum(t_list *l_a);
+void				half_path_a(int len, t_list *l_a, int pos, int size);
 int					choose_pivot(t_list *lst);
 int					is_backwards_list(t_list *list_a);
 int					half_list(int len);
@@ -101,4 +99,7 @@ void				move_up_b(int size, int len, int pos, t_list *lst);
 int					find_list_length(t_list *list);
 t_list				*get_args(int len, char **argv);
 void				print_stacks(t_list *la, t_list *lb);
+
+void				free_list(t_list *lst);
+
 #endif

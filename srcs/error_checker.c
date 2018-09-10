@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   error_checker.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/10 15:42:46 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/10 15:43:46 by tradlof          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include "../includes/push_swap.h"
 
@@ -55,19 +67,4 @@ void		error_checker(int argc, char **argv)
 			error();
 		argv++;
 	}
-}
-
-int		error_check(char **argv)
-{
-	// if ((dup_check(argc, argv)) == 1)
-	// 	error();
-	while (*argv)
-	{
-		if (ft_atol(*argv) > 2147483647 || ft_atol(*argv) < -2147483647)
-			return (0);
-		if ((is_not_digit(*argv)) == 1)
-			return (0);
-		argv++;
-	}
-	return (1);
 }
