@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 15:42:46 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/10 15:43:46 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/10 18:31:37 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void		error_checker(int argc, char **argv)
 	argv++;
 	while (*argv)
 	{
-		if (ft_atol(*argv) > 2147483647)
+		if (ft_atol(*argv) > 2147483647 || ft_atol(*argv) < -2147483648)
 			error();
 		if ((is_not_digit(*argv)) == 1)
 			error();

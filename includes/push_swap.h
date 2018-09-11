@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/10 18:31:28 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/11 09:07:35 by tradlof          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
@@ -88,7 +100,8 @@ int					is_biggest_pos(t_list *lst);
 int					is_smallest_pos(t_list *l_a);
 int					is_minimum(t_list *lst);
 int					is_maximum(t_list *l_a);
-void				half_path_a(int len, t_list *l_a, int pos, int size);
+void				half_path_a(int len, t_list *l_a, int pos);
+void				half_path_b(int len, t_list *l_b, int pos);
 int					choose_pivot(t_list *lst);
 int					is_backwards_list(t_list *list_a);
 int					half_list(int len);

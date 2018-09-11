@@ -1,3 +1,4 @@
+
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -6,7 +7,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 17:43:22 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/10 16:46:58 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/10 12:14:53 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +26,8 @@ void	smallest_first(int len, t_list *l_a)
 
 void	move_up_a(int size, int len, int pos, t_list *l_a)
 {
+	int half;
+
 	while (HEADA != size)
 	{
 		if (HEADA != size && TAILA == size)
@@ -34,7 +37,14 @@ void	move_up_a(int size, int len, int pos, t_list *l_a)
 		else if (HEADA != size && PREVA == size)
 			combo_1a(l_a);
 		else
-			half_path_a(len, l_a, pos, size);
+		{
+			half = half_list(len);
+			if (pos > half)
+				rra_print(l_a);
+			else if (pos <= half)
+				ra_print(l_a);
+			len++;
+		}
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 14:12:43 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/10 07:36:13 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/11 08:31:49 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,20 @@ void		midder(int len, t_list *l_a, t_list *l_b)
 		{
 			smallest_first(len, l_a);
 			pb_print(l_a, l_b);
+			if (is_sorted_list(l_a))
+				break ;
 		}
 		len--;
 		len2++;
 	}
-	list_3(l_a);
-	while (len2 > 0 && l_b != NULL)
+	while (len == 3 && !(is_sorted_list(l_a)))
+		list_3(l_a);
 	{
-		pa_print(l_a, l_b);
-		len2--;
+		while (len2 != 0 && l_b != NULL)
+		{
+			pa_print(l_a, l_b);
+			len2--;
+		}
 	}
 }
 
@@ -66,7 +71,7 @@ void		larger(int len, t_list *l_a, t_list *l_b)
 	returned = 0;
 	while (count != 1 && !is_sort(l_a, l_b))
 	{
-		smallest_first_fifth(len2, l_a, l_b);
+		smallest_first_fifth(len, l_a, l_b);
 	/*	while (l_b->head != NULL)	*/
 	/*	{	*/
 		/*	biggest_first(len2, l_b);	*/
