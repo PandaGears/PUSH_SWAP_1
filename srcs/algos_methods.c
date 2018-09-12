@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 14:12:43 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/11 08:31:49 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/11 16:10:26 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ void		midder(int len, t_list *l_a, t_list *l_b)
 		len--;
 		len2++;
 	}
-	while (len == 3 && !(is_sorted_list(l_a)))
 		list_3(l_a);
 	{
 		while (len2 != 0 && l_b != NULL)

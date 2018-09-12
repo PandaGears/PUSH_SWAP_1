@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 18:31:28 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/11 09:07:35 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/11 18:00:39 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ int					is_not_digit(char *str);
 int					dup_check(int argc, char **argv);
 int					is_list(t_list *lst);
 void				error_checker(int argc, char **argv);
-int					error_check(int argc, char **argv);
 void				error(void);
 void				ok(void);
 void				ko(void);

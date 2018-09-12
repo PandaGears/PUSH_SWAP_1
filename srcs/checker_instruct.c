@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 17:43:34 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/10 06:47:17 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/11 18:06:12 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,3 +47,4 @@ void		checker_r(t_list *l_a, t_list *l_b)
 	while (get_next_line(0, &str))
 		checker_p(str, l_a, l_b);
 }
+

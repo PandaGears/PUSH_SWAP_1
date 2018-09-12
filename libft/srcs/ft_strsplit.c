@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/30 17:45:30 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/10 15:09:02 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/12 09:29:19 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,20 @@
 static int		ft_cntwrd(const char *s, char c)
 {
 	int	i;
-	int	cntr;
+	int	cnt;
 
 	i = 0;
-	cntr = 0;
+	cnt = 0;
 	while (s[i])
 	{
 		while (s[i] == c)
 			i++;
 		if (s[i] != '\0')
-			cntr++;
+			cnt++;
 		while (s[i] && (s[i] != c))
 			i++;
 	}
-	return (cntr);
+	return (cnt);
 }
 
 static char		*ft_strndup(const char *s, size_t n)

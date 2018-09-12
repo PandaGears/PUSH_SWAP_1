@@ -1,4 +1,3 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -6,11 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/08 17:43:22 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/10 12:14:53 by tradlof          ###   ########.fr       */
+/*   Created: 2018/09/11 18:13:36 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/12 09:33:44 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../includes/push_swap.h"
 
@@ -34,8 +32,6 @@ void	move_up_a(int size, int len, int pos, t_list *l_a)
 			rra_print(l_a);
 		else if (HEADA != size && NEXTA == size && NEXEXTA > HEADA)
 			sa_print(l_a);
-		else if (HEADA != size && PREVA == size)
-			combo_1a(l_a);
 		else
 		{
 			half = half_list(len);

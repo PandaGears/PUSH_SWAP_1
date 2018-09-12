@@ -13,7 +13,7 @@ OBJ_PATH_2 = ./objs/
 
 INC_PATH_2 = ./includes/
 
-SRC_NAME_1 = algo_choice.c algos_sets.c algos_tool_identifier.c algos_methods.c algo_tools.c combinations.c double_ps.c error_checker.c free_all.c \
+SRC_NAME_1 = algo_choice.c algos_sets.c algos_tool_identifier.c algos_methods.c algo_tools.c double_ps.c error_checker.c free_all.c \
 			is_sort.c notify.c algos_larger.c push_swap_ps.c push.c push_swap_main.c rotate.c rotate_ps.c reverse_rotate.c swap.c get_arg.c visualiser.c
 				
 SRC_NAME_2 = checker_main.c swap.c push.c rotate.c reverse_rotate.c checker_instruct.c notify.c \
