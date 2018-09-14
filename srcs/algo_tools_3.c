@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/14 18:01:18 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/14 18:21:10 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/14 18:38:06 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,8 @@ void	rotate_b(t_push *push, int i)
 {
 	int	lst_a;
 
-	if ((L_A && L_BB) && L_A->value < HI_V(&push->lst_b) && L_A->value > LO_V(&push->lst_b))
+	if ((L_A && L_BB) && L_A->value < HI_V(&push->lst_b) && \
+	L_A->value > LO_V(&push->lst_b))
 	{
 		lst_a = biggest_under_l(&push->lst_b, L_A->value);
 		if (find_pos(&push->lst_b, lst_a) < ft_list_size(&push->lst_b) / 2)
