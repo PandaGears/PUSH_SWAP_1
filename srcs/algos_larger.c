@@ -5,62 +5,134 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/08 17:40:33 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/08 17:40:34 by tradlof          ###   ########.fr       */
+/*   Created: 2018/09/14 17:37:31 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/14 18:01:04 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int		find_val_limit(int len, int smallest, t_list *list)
+void		execute(t_push *push)
 {
-	int		fifth;
-	int		val_limit;
-	t_node	*node;
-	int		current_smallest;
-	int		count;
-
-	fifth = fifth_list(len);
-	node = list->head;
-	count = 0;
-	while (count <= fifth)
+	while (!(is_sorted_list_l(A_L) == 1))
 	{
-		current_smallest = list->head->data;
-		while (node != NULL)
-		{
-			if (node->data < current_smallest && node->data > smallest)
-			{
-				current_smallest = node->data;
-			}
-			node = node->next;
-		}
-		smallest = current_smallest;
-		count++;
+		if ((L_AB) && (L_BNEXT->value > L_B->value)
+		&& (L_A->value > L_ANEXT->value) && (L_A->value < ABV))
+			RULE("ss");
+		if ((L_AB) && (L_BNEXT->value < L_B->value)
+			&& (L_A->value < L_ANEXT->value) && (L_ANEXT->value > ABV) && \
+			(BBV > L_BNEXT->value))
+			RULE("ss");
+		if ((L_AB) && (L_B->value < BBV) && (L_A->value > ABV))
+			RULE("rr");
+		if ((L_AA) && (L_A->value > L_ANEXT->value) && (L_A->value < ABV))
+			RULE("sa");
+		if ((L_BB) && (L_BNEXT->value > L_B->value))
+			RULE("sb");
+		if ((L_AA) && (L_ANEXT->value > L_A->value) && (L_ANEXT->value > ABV))
+			RULE("sa");
+		if ((L_BB) && (L_B->value < BBV))
+			RULE("rb");
+		if ((L_AA) && (L_A->value > ABV))
+			RULE("ra");
+		RULE("pb");
 	}
-	val_limit = smallest;
-	return (val_limit);
 }
 
-void	smallest_first_fifth(int len, t_list *l_a, t_list *l_b)
+void		rotateb(t_push *push, int pos, int halfstack)
 {
-	int		smallest;
-	int		val_limit;
-	int		smallest_pos;
-	int		count;
+	int i;
 
-	count = 0;
-	smallest = is_minimum(l_a);
-	smallest_pos = is_smallest_pos(l_a);
-	val_limit = l_a->head->data;
-	val_limit = find_val_limit(len, smallest, l_a);
-	while (smallest <= val_limit)
+	i = 0;
+	while (!i)
 	{
-		move_up_a(smallest, len, smallest_pos, l_a);
-		pb_print(l_a, l_b);
-		smallest = is_minimum(l_a);
-		smallest_pos = is_smallest_pos(l_a);
-		count++;
-		if (count >= val_limit)
-			break ;
+		i++;
+		if (pos > halfstack)
+		{
+			RULE("rrb");
+		}
+		else
+			RULE("rb");
+	}
+}
+
+void		secondhighest(t_push *push)
+{
+	int i;
+
+	i = 0;
+	while (i < 2)
+	{
+		while (i == 0 && L_B->value != NEWH(B_L))
+			rotateb(push, BHP(NEWH(B_L)), (ft_list_size(B_L) / 2));
+		if (i == 0 && L_B->value == NEWH(B_L))
+		{
+			i++;
+			RULE("pa");
+		}
+		while (i == 1 && L_B->value != HI_V(B_L))
+			rotateb(push, BHP(HI_V(B_L)), (ft_list_size(B_L) / 2));
+		if (i == 1 && L_B->value == HI_V(B_L))
+		{
+			i++;
+			RULE("pa");
+		}
+	}
+	while (i == 2)
+	{
+		i++;
+		RULE("sa");
+	}
+}
+
+void		piece_up(t_push *push)
+{
+	int i;
+
+	i = 0;
+	while (!(is_sorted_list_l(&push->lst_a) == 1))
+	{
+		i++;
+		if (checkdoublerule(push))
+			continue;
+		if ((L_AA) && (L_A->value > ABV))
+			RULE("ra");
+		if ((L_AA) && (L_A->value > L_ANEXT->value) && (L_A->value < ABV))
+			RULE("sa");
+		if ((L_BB) && (L_B->value < BBV))
+			RULE("rb");
+		if ((L_BB) && (L_BNEXT->value > L_B->value))
+			RULE("sb");
+		if ((L_AA) && (ABV < L_A->value) && (ABV < L_ANEXT->value))
+			RULE("rra");
+		if ((L_AA) && (L_ANEXT->value > L_A->value) && (L_ANEXT->value > ABV))
+			RULE("sa");
+		rotate_b(push, i);
+		RULE("pb");
+	}
+}
+
+void		partition(t_push *push)
+{
+	int parts;
+	int sect;
+	int i;
+
+	i = 0;
+	sect = 1;
+	parts = (ft_list_size(&push->lst_a) > 250 ? 10 : 5);
+	while (sect <= parts)
+	{
+		while (i < RANGE())
+		{
+			if (L_A->value <= RANGE())
+			{
+				i++;
+				RULE("pb");
+			}
+			else
+				RULE("ra");
+		}
+		sect++;
 	}
 }

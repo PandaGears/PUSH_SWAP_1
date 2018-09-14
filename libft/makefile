@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tradlof <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/02 08:22:23 by tradlof           #+#    #+#              #
-#    Updated: 2018/08/08 12:04:22 by tradlof          ###   ########.fr        #
+#    Updated: 2018/09/14 07:55:28 by tradlof          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ SRC_NAME = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c \
 	ft_list_moveto_next.c ft_list_moveto_prev.c ft_list_swap.c \
 	ft_create_elem.c ft_countwords.c ft_list_append.c ft_list_del.c \
 	ft_list_new.c ft_list_prepend.c ft_print_list.c ft_swap.c ft_pivot.c \
-	ft_atol.c amount_of_words.c
+	ft_atol.c amount_of_words.c free_all.c array_cpy.c ft_isnumber.c
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
 OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))

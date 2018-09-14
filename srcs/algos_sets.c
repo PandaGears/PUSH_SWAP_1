@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 14:12:46 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/11 16:15:01 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/13 17:03:23 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,37 @@
 
 void		list_2(t_list *l_a)
 {
-	if (HEADA > TAILA)
-		sa_print(l_a);
+	while (l_a != NULL)
+	{
+		if (is_sorted_list(l_a))
+			break ;
+		else if (HEADA > TAILA)
+			sa_print(l_a);
+	}
 }
 
 void		list_3(t_list *l_a)
 {
-	if (HEADA < NEXTA)
+	while (l_a != NULL)
 	{
-		rra_print(l_a);
-		if (is_sorted_list(l_a) == 0)
+		if (is_sorted_list(l_a))
+			break ;
+		else if (HEADA < NEXTA)
+		{
+			rra_print(l_a);
+			if (is_sorted_list(l_a) == 0)
+				sa_print(l_a);
+		}
+		else if (HEADA > NEXTA)
+		{
+			if (HEADA > TAILA)
+				ra_print(l_a);
+			if (is_sorted_list(l_a) == 0)
+				sa_print(l_a);
+		}
+		else
 			sa_print(l_a);
 	}
-	else if (HEADA > NEXTA)
-	{
-		if (HEADA > TAILA)
-			ra_print(l_a);
-		if (is_sorted_list(l_a) == 0)
-			sa_print(l_a);
-	}
-	else
-		sa_print(l_a);
 }
 
 void		list_4(int len, t_list *l_a, t_list *l_b)

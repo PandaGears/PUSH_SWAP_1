@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_main.c                                   :+:      :+:    :+:   */
+/*   moves_dl.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/10 12:30:12 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/13 08:15:57 by tradlof          ###   ########.fr       */
+/*   Created: 2018/09/14 16:44:15 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/14 16:48:37 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../includes/push_swap.h"
 
-int		main(int argc, char **argv)
+void		ss_l(t_listdata *a, t_listdata *b)
 {
-	t_list	*list_a;
-	t_list	*list_b;
-	t_list	*args;
+	sa_l(a);
+	sb_l(b);
+}
 
-	error_checker(argc, argv);
-	args = get_args(argc, argv);
-	list_a = ft_list_new();
-	list_b = ft_list_new();
-	argv++;
-	while (*argv)
-	{
-		list_a = ft_list_append(list_a, ft_atoi(*argv));
-		argv++;
-	}
-	if (is_sort(list_a, list_b))
-		exit(1);
-	else
-		decisions(list_a, list_b);
+void		rr_l(t_listdata *a, t_listdata *b)
+{
+	ra_l(a);
+	rb_l(b);
+}
+
+void		rrr_l(t_listdata *a, t_listdata *b)
+{
+	rra_l(a);
+	rrb_l(b);
 }

@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/11 18:13:36 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/12 09:33:44 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/14 07:53:53 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,15 @@ void	move_up_a(int size, int len, int pos, t_list *l_a)
 			sa_print(l_a);
 		else
 		{
-			half = half_list(len);
-			if (pos > half)
-				rra_print(l_a);
-			else if (pos <= half)
-				ra_print(l_a);
-			len++;
+			while (HEADA != size)
+			{
+				half = half_list(len);
+				if (pos > half)
+					rra_print(l_a);
+				else if (pos <= half)
+					ra_print(l_a);
+				len++;
+			}
 		}
 	}
 }
@@ -47,7 +50,7 @@ void	move_up_a(int size, int len, int pos, t_list *l_a)
 void	biggest_first(int len, t_list *list)
 {
 	t_node	*node;
-	int		biggest;
+	int		biggest; 
 	int		biggest_pos;
 
 	len = fifth_list(len);
@@ -67,11 +70,6 @@ void	move_up_b(int size, int len, int pos, t_list *l_b)
 			rrb_print(l_b);
 		else if (HEADB != size && NEXTB == size && NEXEXTB > HEADB)
 			sb_print(l_b);
-		else if (HEADB != size && PREVB == size)
-		{
-			rrb_print(l_b);
-			rrb_print(l_b);
-		}
 		else
 		{
 			half = half_list(len);
@@ -82,4 +80,12 @@ void	move_up_b(int size, int len, int pos, t_list *l_b)
 			len++;
 		}
 	}
+}
+
+int		move(t_listdata *list, int val)
+{
+	int pos;
+
+	pos = find_pos(list, val);
+	return (pos > ft_list_size(list) / 2 ? ft_list_size(list) - pos : pos);
 }

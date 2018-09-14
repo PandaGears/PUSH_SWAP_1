@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_main.c                                   :+:      :+:    :+:   */
+/*   free_all.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/10 12:30:12 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/13 08:15:57 by tradlof          ###   ########.fr       */
+/*   Created: 2018/09/12 17:33:33 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/13 17:42:24 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/libft.h"
 
-#include "../includes/push_swap.h"
-
-int		main(int argc, char **argv)
+void	free2(char **all)
 {
-	t_list	*list_a;
-	t_list	*list_b;
-	t_list	*args;
+	int		counter;
 
-	error_checker(argc, argv);
-	args = get_args(argc, argv);
-	list_a = ft_list_new();
-	list_b = ft_list_new();
-	argv++;
-	while (*argv)
+	counter = 0;
+	while (all[counter])
 	{
-		list_a = ft_list_append(list_a, ft_atoi(*argv));
-		argv++;
+		free(all[counter]);
+		counter++;
 	}
-	if (is_sort(list_a, list_b))
-		exit(1);
-	else
-		decisions(list_a, list_b);
+	free(all);
 }

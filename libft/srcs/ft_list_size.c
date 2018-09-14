@@ -3,18 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_list_size.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tradlof <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/23 07:14:10 by tradlof           #+#    #+#             */
-/*   Updated: 2018/07/23 07:14:36 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/14 07:54:23 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-size_t	ft_list_size(t_list *begin_list)
+int	ft_list_size(t_listdata *list)
 {
-	if (begin_list == NULL)
-		return (0);
-	return (ft_list_size(begin_list->next) + 1);
+	t_list	*top;
+	int		i;
+
+	top = list->lst;
+	i = 0;
+	while (top)
+	{
+		i++;
+		top = top->next;
+	}
+	return (i);
 }

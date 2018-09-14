@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_main.c                                   :+:      :+:    :+:   */
+/*   ft_isnumber.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/10 12:30:12 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/13 08:15:57 by tradlof          ###   ########.fr       */
+/*   Created: 2018/09/13 17:58:41 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/13 17:59:08 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/libft.h"
 
-#include "../includes/push_swap.h"
-
-int		main(int argc, char **argv)
+int	ft_isnum(char *str)
 {
-	t_list	*list_a;
-	t_list	*list_b;
-	t_list	*args;
+	int		index;
+	int		len;
+	char	*num;
 
-	error_checker(argc, argv);
-	args = get_args(argc, argv);
-	list_a = ft_list_new();
-	list_b = ft_list_new();
-	argv++;
-	while (*argv)
+	num = ft_itoa(ft_atoi(str));
+	index = 0;
+	len = ft_strlen(str);
+	if (str[index] == '-' || str[index] == '+')
+		index++;
+	while (str[index] && ft_isdigit(str[index]))
+		index++;
+	if (index == len)
 	{
-		list_a = ft_list_append(list_a, ft_atoi(*argv));
-		argv++;
+		len = ft_strequ(num, str);
+		free(num);
+		return (len);
 	}
-	if (is_sort(list_a, list_b))
-		exit(1);
-	else
-		decisions(list_a, list_b);
+	free(num);
+	return (0);
 }

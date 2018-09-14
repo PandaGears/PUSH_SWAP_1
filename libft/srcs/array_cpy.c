@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_all.c                                         :+:      :+:    :+:   */
+/*   array_cpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/10 14:48:59 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/12 14:46:44 by tradlof          ###   ########.fr       */
+/*   Created: 2018/09/13 17:58:47 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/13 19:21:07 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../includes/libft.h"
 
-void		free_list(t_list *lst)
+void	arrcpy(char **a, char **b)
 {
-	t_list	*tmp;
+	int i;
 
-	while (lst != NULL)
-	{
-		tmp = lst->next;
-		free(lst);
-		lst = tmp;
-	}
+	i = 0;
+	while (a[++i])
+		b[i - 1] = ft_strdup(a[i]);
+	b[i - 1] = NULL;
 }

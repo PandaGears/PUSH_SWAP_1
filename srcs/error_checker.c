@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 15:42:46 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/12 14:46:46 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/13 07:58:45 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,9 @@ void		error_checker(int argc, char **argv)
 			error();
 		if ((is_not_digit(*argv)) == 1)
 			error();
+		if (argc <= 1)
+			exit(1);
 		argv++;
 	}
 }
+

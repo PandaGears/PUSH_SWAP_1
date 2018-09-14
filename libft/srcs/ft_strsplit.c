@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/30 17:45:30 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/12 09:29:19 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/12 18:17:20 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,15 @@ static int		ft_cntwrd(const char *s, char c)
 static char		*ft_strndup(const char *s, size_t n)
 {
 	char	*str;
+	char	*tmp;
 
 	str = (char *)malloc(sizeof(char) * n + 1);
-	if (str == NULL)
+	tmp = str;
+	if (tmp == NULL)
 		return (NULL);
-	str = ft_strncpy(str, (char *)s, n);
-	str[n] = '\0';
-	return (str);
+	tmp = ft_strncpy(str, (char *)s, n);
+	tmp[n] = '\0';
+	return (tmp);
 }
 
 char			**ft_strsplit(char const *s, char c)
