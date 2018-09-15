@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/11 18:13:36 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/15 14:00:40 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/15 14:22:51 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	move_up_a(int size, int len, int pos, t_list *l_a)
 {
 	int half;
 
-	len = find_list_length(l_a);
 	while (HEADA != size)
 	{
 		if (HEADA != size && TAILA == size)
@@ -37,6 +36,7 @@ void	move_up_a(int size, int len, int pos, t_list *l_a)
 		{
 			while (HEADA != size)
 			{
+				len = find_list_length(l_a);
 				half = half_list(len);
 				if (pos > half)
 					rra_print(l_a);
@@ -51,7 +51,7 @@ void	move_up_a(int size, int len, int pos, t_list *l_a)
 void	biggest_first(int len, t_list *list)
 {
 	t_node	*node;
-	int		biggest; 
+	int		biggest;
 	int		biggest_pos;
 
 	len = fifth_list(len);

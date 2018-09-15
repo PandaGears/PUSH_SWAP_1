@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 18:31:28 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/15 13:00:39 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/15 14:42:16 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@
 # define PREVB     	l_b->tail->prev->data
 # define PREVEVB   	l_b->tail->prev->prev->data
 
-int					is_sorted_list(t_list *l_a);
+int					is_sorted_list_a(t_list *l_a);
+int					is_sorted_list_b(t_list *l_b);
 int					is_sort(t_list *l_a, t_list *l_b);
 int					is_not_digit(char *str);
 int					dup_check(int argc, char **argv);
@@ -51,7 +52,7 @@ void				show_usage(void);
 void				algos_backwards(int len, t_list *list_a, \
 	t_list *list_b);
 void				checker_r(t_list *l_a, t_list *l_b);
-void				bubble_sorter(t_list *lst, int size);
+void				l_b_sort(t_list *lst);
 void				print_stacks(t_list *l_a, t_list *l_b);
 
 void				midder(int len, t_list *list_a, t_list *list_b);
@@ -111,10 +112,6 @@ void				move_up_b(int size, int len, int pos, t_list *lst);
 int					find_list_length(t_list *list);
 t_list				*get_args(int len, char **argv);
 void				print_stacks(t_list *la, t_list *lb);
-
-int					check_largest_l(t_listdata *stack);
-int					is_backward_l(t_listdata *a);
-int					is_sorted_list_l(t_listdata *a);
 
 void				free3(t_list *list);
 

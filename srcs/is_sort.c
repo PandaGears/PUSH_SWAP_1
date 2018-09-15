@@ -6,16 +6,16 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 14:46:33 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/15 11:56:12 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/15 14:47:29 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../includes/push_swap.h"
 
 int		is_sort(t_list *l_a, t_list *l_b)
 {
 	t_node	*node;
+
 	if (l_a->head != NULL)
 		node = l_a->head;
 	else
@@ -35,7 +35,7 @@ int		is_sort(t_list *l_a, t_list *l_b)
 		return (1);
 }
 
-int		is_sorted_list(t_list *l_a)
+int		is_sorted_list_a(t_list *l_a)
 {
 	t_node	*node;
 
@@ -63,4 +63,20 @@ int		is_backwards_list(t_list *list_a)
 			return (1);
 	}
 	return (0);
+}
+
+int		is_sorted_list_b(t_list *l_b)
+{
+	t_node	*node;
+
+	node = l_b->head;
+	if (l_b->head->data == l_b->tail->data)
+		return (1);
+	while (node->next != NULL)
+	{
+		if (node->data < node->next->data)
+			return (0);
+		node = node->next;
+	}
+	return (1);
 }
