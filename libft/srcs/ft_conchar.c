@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   moves_dl.c                                         :+:      :+:    :+:   */
+/*   ft_conchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/14 16:44:15 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/14 16:48:37 by tradlof          ###   ########.fr       */
+/*   Created: 2018/09/15 12:42:19 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/15 12:42:31 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../includes/libft.h"
 
-void		ss_l(t_listdata *a, t_listdata *b)
+int	ft_conchar(const char *str, char c)
 {
-	sa_l(a);
-	sb_l(b);
-}
-
-void		rr_l(t_listdata *a, t_listdata *b)
-{
-	ra_l(a);
-	rb_l(b);
-}
-
-void		rrr_l(t_listdata *a, t_listdata *b)
-{
-	rra_l(a);
-	rrb_l(b);
+	while (*str)
+	{
+		if (*str == c)
+			return (1);
+		str++;
+	}
+	return (0);
 }

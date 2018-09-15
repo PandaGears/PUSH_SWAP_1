@@ -6,7 +6,7 @@
 #    By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/02 08:22:23 by tradlof           #+#    #+#              #
-#    Updated: 2018/09/14 07:55:28 by tradlof          ###   ########.fr        #
+#    Updated: 2018/09/15 12:51:17 by tradlof          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ SRC_NAME = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c \
 	ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
 	ft_lstmap.c ft_islower.c ft_isspace.c ft_isupper.c ft_memccpy.c \
 	ft_stpcpy.c ft_stralloc.c ft_strqdupc.c ft_strlenc.c ft_strfill.c \
-	ft_stpcpyc.c ft_strallocc.c ft_strcount.c ft_llintlen.c get_next_line.c \
+	ft_stpcpyc.c ft_strallocc.c ft_strcount.c ft_strndup.c ft_llintlen.c get_next_line.c \
 	ft_strnew_double.c ft_list_at.c ft_list_clear.c ft_list_find.c \
 	ft_list_foreach_if.c ft_list_foreach.c ft_list_last.c ft_list_merge.c \
 	ft_list_push_back.c ft_list_push_front.c ft_list_push_params.c \
@@ -40,7 +40,8 @@ SRC_NAME = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c \
 	ft_list_moveto_next.c ft_list_moveto_prev.c ft_list_swap.c \
 	ft_create_elem.c ft_countwords.c ft_list_append.c ft_list_del.c \
 	ft_list_new.c ft_list_prepend.c ft_print_list.c ft_swap.c ft_pivot.c \
-	ft_atol.c amount_of_words.c free_all.c array_cpy.c ft_isnumber.c
+	ft_atol.c amount_of_words.c free_all.c array_cpy.c ft_isnumber.c \
+	ft_conchar.c ft_dup_conchar.c ft_index_of_char.c g_n_l.c get_next.c
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
 OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))

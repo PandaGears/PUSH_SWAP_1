@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   ft_dup_conchar.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/12 14:46:06 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/15 11:56:53 by tradlof          ###   ########.fr       */
+/*   Created: 2018/09/15 12:42:13 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/15 12:42:39 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../includes/libft.h"
 
-void		rotate(t_list *l_a)
+char	*ft_dup_conchar(const char *str, char c)
 {
-	ft_list_append(l_a, HEADA);
-	ft_list_del(l_a, l_a->head);
-}
+	char	*fresh;
+	int		i;
 
-void		ra(t_list *lst)
-{
-	rotate(lst);
-}
-
-void		rb(t_list *lst)
-{
-	rotate(lst);
-}
-
-void		rr(t_list *l_a, t_list *l_b)
-{
-	rotate(l_a);
-	rotate(l_b);
+	i = 0;
+	fresh = NULL;
+	if (ft_conchar(str, c))
+	{
+		i = ft_index_of_char(str, c);
+		fresh = ft_strndup(str, i);
+	}
+	return (fresh);
 }

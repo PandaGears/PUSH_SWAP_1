@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 17:40:39 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/14 18:48:52 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/15 13:54:34 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void	algos_backwards(int len, t_list *list_a, t_list *list_b)
 void	decisions(t_list *l_a, t_list *l_b)
 {
 	int		length;
-	t_push	list_a;
 
 	length = find_list_length(l_a);
 	if ((is_backwards_list(l_a) == 1) && length > 2)
@@ -44,9 +43,6 @@ void	decisions(t_list *l_a, t_list *l_b)
 		list_4(length, l_a, l_b);
 	else if (length <= 10)
 		lesser(length, l_a, l_b);
-	else if (length <= 100)
+	else if (length >= 100)
 		midder(length, l_a, l_b);
-	else
-		larger(length, l_a, l_b);
-	free3(&list_a.lst_a);
 }

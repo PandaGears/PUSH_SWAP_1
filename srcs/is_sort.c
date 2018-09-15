@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 14:46:33 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/14 15:55:26 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/15 11:56:12 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,57 +63,4 @@ int		is_backwards_list(t_list *list_a)
 			return (1);
 	}
 	return (0);
-}
-
-int			check_largest_l(t_listdata *stack)
-{
-	t_list *head;
-	t_list *head2;
-
-	head = stack->lst;
-	head2 = stack->lst->next;
-	while (head2)
-	{
-		if (head->value < head2->value)
-			return (0);
-		else
-			head2 = head2->next;
-	}
-	return (1);
-}
-
-int			is_backward_l(t_listdata *a)
-{
-	t_list *head;
-
-	head = a->lst;
-	while (head && head->next)
-	{
-		if (head->value > head->next->value)
-			head = head->next;
-		else
-			return (0);
-	}
-	return (1);
-}
-
-int			is_sorted_list_l(t_listdata *a)
-{
-	t_list *head;
-
-	head = a->lst;
-	while (head && head->next)
-	{
-		if ((head->value < head->next->value)
-		&& (head->next->value - head->value == 1))
-			head = head->next;
-		else
-		{
-			if (is_backward_l(a))
-				return (2);
-			else
-				return (0);
-		}
-	}
-	return (1);
 }

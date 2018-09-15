@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   ft_index_of_char.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/12 14:46:06 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/15 11:56:53 by tradlof          ###   ########.fr       */
+/*   Created: 2018/09/15 12:42:07 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/15 12:42:49 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../includes/libft.h"
 
-void		rotate(t_list *l_a)
+int	ft_index_of_char(const char *str, char c)
 {
-	ft_list_append(l_a, HEADA);
-	ft_list_del(l_a, l_a->head);
-}
+	int index;
 
-void		ra(t_list *lst)
-{
-	rotate(lst);
-}
-
-void		rb(t_list *lst)
-{
-	rotate(lst);
-}
-
-void		rr(t_list *l_a, t_list *l_b)
-{
-	rotate(l_a);
-	rotate(l_b);
+	index = 0;
+	while (str[index])
+	{
+		if (str[index] == c)
+			break ;
+		index++;
+	}
+	return (index);
 }

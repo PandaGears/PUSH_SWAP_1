@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 14:12:43 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/14 14:56:48 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/15 14:01:24 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,3 @@ void		midder(int len, t_list *l_a, t_list *l_b)
 		len2--;
 	}
 }
-
-
-
-// void		larger(len t_list *l_a, t_list *l_b)
-// {
-
-// }

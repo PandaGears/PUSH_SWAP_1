@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 17:03:38 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/14 18:04:32 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/15 12:53:32 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,14 @@
 # define CYN  "\x1B[36m"
 # define WHT  "\x1B[37m"
 
-typedef struct			s_gnl
+typedef struct	s_gnl
 {
-	char				*text;
-	char				*tempo;
-	struct s_gnl		*next;
-	int					fd;
-}						t_gnl;
+	char	*buff;
+	char	*tmp;
+	int		ret;
+	int		i;
+	char	delimiter;
+}				t_gnl;
 
 
 typedef struct			s_node
@@ -49,7 +50,7 @@ typedef struct			s_node
 	int					data;
 	struct s_node		*next;
 	struct s_node		*prev;
-	int					value;
+	int					*value;
 }						t_node;
 
 typedef struct			s_list
@@ -188,6 +189,7 @@ size_t					ft_strlenc(const char *s, char c);
 size_t					ft_strlen(const char *s);
 size_t					ft_strlcat(char *dst, const char *src, size_t size);
 
+char					*ft_strndup(const char *src, size_t i);
 char					*ft_strncat(char *s1, const char *s2, size_t n);
 char					*ft_stralloc(const char *s);
 char					*ft_strallocc(const char *s, char c);
@@ -246,6 +248,10 @@ int						ft_isupper(int c);
 int						ft_tolower(int c);
 int						ft_toupper(int c);
 
+int						ft_index_of_char(const char *str, char c);
+char					*ft_dup_conchar(const char *str, char c);
+int						ft_conchar(const char *str, char c);
+int						get_next(int fd, char **line, char delimiter);
 void					free2(char **all);
 
 #endif
