@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 17:03:38 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/15 12:53:32 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/15 15:07:56 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,14 @@
 # define CYN  "\x1B[36m"
 # define WHT  "\x1B[37m"
 
-typedef struct	s_gnl
+typedef struct			s_gnl
 {
-	char	*buff;
-	char	*tmp;
-	int		ret;
-	int		i;
-	char	delimiter;
-}				t_gnl;
-
+	char				*buff;
+	char				*tmp;
+	int					ret;
+	int					i;
+	char				delimiter;
+}						t_gnl;
 
 typedef struct			s_node
 {
@@ -118,7 +117,7 @@ typedef struct			s_env
 int						ft_list_is_head(t_list *lst);
 int						ft_list_is_single(t_list *lst);
 
-int					ft_list_size(t_listdata *list);
+int						ft_list_size(t_listdata *list);
 
 t_list					*ft_create_elem(void *content);
 t_list					*ft_lstnew(void const *content,

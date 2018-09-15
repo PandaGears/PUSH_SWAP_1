@@ -6,10 +6,9 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 14:12:43 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/15 14:55:05 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/15 15:02:19 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../includes/push_swap.h"
 
@@ -26,7 +25,6 @@ void		lesser(int len, t_list *l_a, t_list *l_b)
 		len2++;
 	}
 	list_3(l_a);
-
 	while (len2 != 0)
 	{
 		pa_print(l_a, l_b);
@@ -62,7 +60,7 @@ void		midder(int len, t_list *l_a, t_list *l_b)
 	}
 }
 
-void	l_b_sort(t_list *l_b)
+void		l_b_sort(t_list *l_b)
 {
 	t_node	*node;
 	int		i;

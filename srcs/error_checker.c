@@ -6,10 +6,9 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 15:42:46 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/13 07:58:45 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/15 14:59:03 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../includes/push_swap.h"
 
@@ -70,4 +69,3 @@ void		error_checker(int argc, char **argv)
 		argv++;
 	}
 }
-

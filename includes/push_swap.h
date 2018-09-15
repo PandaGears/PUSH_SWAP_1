@@ -6,10 +6,9 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 18:31:28 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/15 14:42:16 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/15 15:06:33 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
@@ -22,14 +21,12 @@
 # define TAILA		l_a->tail->data
 # define PREVA		l_a->tail->prev->data
 # define PREVEVA	l_a->tail->prev->prev->data
-
 # define HEAD		lst->head->data
 # define NEXT		lst->head->next->data
 # define NEXEXT		lst->head->next->next->data
 # define TAIL		lst->tail->data
 # define PREV		lst->tail->prev->data
 # define PREVEV		lst->tail->prev->prev->data
-
 # define HEADB		l_b->head->data
 # define NEXTB     	l_b->head->next->data
 # define NEXEXTB  	l_b->head->next->next->data
