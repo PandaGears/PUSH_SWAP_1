@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 18:31:28 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/15 15:06:33 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/15 16:12:09 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void				checker_r(t_list *l_a, t_list *l_b);
 void				l_b_sort(t_list *lst);
 void				print_stacks(t_list *l_a, t_list *l_b);
 
+void				greater(int len, t_list *l_a, t_list *l_b);
 void				midder(int len, t_list *list_a, t_list *list_b);
 void				lesser(int len, t_list *l_a, t_list *l_b);
 void				list_4(int len, t_list *l_a, t_list *l_b);
