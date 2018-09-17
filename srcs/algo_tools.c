@@ -1,14 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   algo_tools.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/11 18:13:36 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/15 15:41:31 by tradlof          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
@@ -22,19 +11,17 @@ void	smallest_first(int len, t_list *l_a)
 	move_up_a(smallest, len, smallest_pos, l_a);
 }
 
-void	move_up_a(int size, int len, int pos, t_list *l_a)
+void	move_up_a(int smallest, int len, int pos, t_list *l_a)
 {
 	int half;
 
-	while (HEADA != size)
+	while (HEADA != smallest)
 	{
-		if (HEADA != size && TAILA == size)
-			rra_print(l_a);
-		else if (HEADA != size && NEXTA == size && NEXEXTA > HEADA)
+		if (HEADA != smallest && NEXTA == smallest)
 			sa_print(l_a);
 		else
 		{
-			while (HEADA != size)
+			while (HEADA != smallest)
 			{
 				len = find_list_length(l_a);
 				half = half_list(len);

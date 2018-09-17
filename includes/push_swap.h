@@ -1,14 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/10 18:31:28 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/15 16:12:09 by tradlof          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
@@ -21,12 +11,14 @@
 # define TAILA		l_a->tail->data
 # define PREVA		l_a->tail->prev->data
 # define PREVEVA	l_a->tail->prev->prev->data
+
 # define HEAD		lst->head->data
 # define NEXT		lst->head->next->data
 # define NEXEXT		lst->head->next->next->data
 # define TAIL		lst->tail->data
 # define PREV		lst->tail->prev->data
 # define PREVEV		lst->tail->prev->prev->data
+
 # define HEADB		l_b->head->data
 # define NEXTB     	l_b->head->next->data
 # define NEXEXTB  	l_b->head->next->next->data
@@ -92,9 +84,6 @@ void				smallest_first(int len, t_list *l_a);
 void				biggest_first(int len, t_list *list);
 
 void				decisions(t_list *l_a, t_list *l_b);
-void				combo_2a(t_list *lst);
-void				combo_1a(t_list *lst);
-int					find_val_limit(int len, int smallest, t_list *list);
 int					is_biggest_pos(t_list *lst);
 int					is_smallest_pos(t_list *l_a);
 int					is_minimum(t_list *lst);
@@ -104,13 +93,12 @@ int					choose_pivot(t_list *lst);
 int					is_backwards_list(t_list *list_a);
 int					half_list(int len);
 int					fifth_list(int len);
-void				move_up_a(int smallest, int len, \
-	int smallest_pos, t_list *lst);
+void				move_up_a(int smallest, int len, int pos, t_list *lst);
 void				move_up_b(int size, int len, int pos, t_list *lst);
 int					find_list_length(t_list *list);
 t_list				*get_args(int len, char **argv);
 void				print_stacks(t_list *la, t_list *lb);
 
 void				free3(t_list *list);
-
+void				free_double(t_list *l_a, t_list *l_b);
 #endif

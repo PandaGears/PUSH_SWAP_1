@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 17:03:38 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/15 15:07:56 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/17 14:20:03 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,39 +49,19 @@ typedef struct			s_node
 	int					data;
 	struct s_node		*next;
 	struct s_node		*prev;
-	int					*value;
 }						t_node;
 
 typedef struct			s_list
 {
-	size_t				len;
-	struct s_list		*node;
-	struct s_list		*prev;
-	struct s_list		*data;
 	void				*content;
 	size_t				content_size;
 	struct s_list		*next;
+	struct s_list		*prev;
+	struct s_list		*data;
+	size_t				len;
 	t_node				*head;
 	t_node				*tail;
-	int					value;
-	int					size;
-	int					asize;
-	int					bsize;
-	int					pivot;
 }						t_list;
-
-typedef struct			s_listdata
-{
-	t_list				*lst;
-	int					size;
-}						t_listdata;
-
-typedef struct			s_push
-{
-	t_listdata			lst_a;
-	t_listdata			lst_b;
-	int					debug;
-}						t_push;
 
 typedef unsigned char	t_byte;
 
@@ -116,8 +96,6 @@ typedef struct			s_env
 
 int						ft_list_is_head(t_list *lst);
 int						ft_list_is_single(t_list *lst);
-
-int						ft_list_size(t_listdata *list);
 
 t_list					*ft_create_elem(void *content);
 t_list					*ft_lstnew(void const *content,

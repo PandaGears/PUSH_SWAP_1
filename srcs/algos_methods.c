@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 14:12:43 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/15 16:11:26 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/17 16:25:53 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ void		midder(int len, t_list *l_a, t_list *l_b)
 	{
 		smallest_first(len, l_a);
 		pb_print(l_a, l_b);
-		if (is_sorted_list_a(l_a))
-			break ;
 		len--;
 		len2++;
+		if (is_sorted_list_a(l_a))
+			break ;
 	}
 	list_3(l_a);
 	while (len2 != 0)
@@ -66,7 +66,9 @@ void		greater(int len, t_list *l_a, t_list *l_b)
 	{
 		smallest_first(len, l_a);
 		pb_print(l_a, l_b);
-		if (is_sorted_list_a(l_a))
+		if (HEADA > NEXTA)
+			sa_print(l_a);
+		else if (is_sorted_list_a(l_a))
 			break ;
 		len--;
 		len2++;

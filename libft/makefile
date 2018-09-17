@@ -6,7 +6,7 @@
 #    By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/02 08:22:23 by tradlof           #+#    #+#              #
-#    Updated: 2018/09/15 12:51:17 by tradlof          ###   ########.fr        #
+#    Updated: 2018/09/17 13:28:54 by tradlof          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ SRC_NAME = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c \
 	ft_list_foreach_if.c ft_list_foreach.c ft_list_last.c ft_list_merge.c \
 	ft_list_push_back.c ft_list_push_front.c ft_list_push_params.c \
 	ft_list_remove_if.c ft_list_reverse_fun.c ft_list_reverse.c \
-	ft_list_size.c ft_list_sort.c ft_list_add_new.c ft_list_add_prev.c \
+	ft_list_sort.c ft_list_add_new.c ft_list_add_prev.c \
 	ft_list_disconnect.c ft_list_is_head.c ft_list_is_single.c \
 	ft_list_moveto_next.c ft_list_moveto_prev.c ft_list_swap.c \
 	ft_create_elem.c ft_countwords.c ft_list_append.c ft_list_del.c \

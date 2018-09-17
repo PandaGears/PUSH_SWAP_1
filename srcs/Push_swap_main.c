@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 12:30:12 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/15 13:02:17 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/17 12:31:50 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@ int		main(int argc, char **argv)
 {
 	t_list	*l_a;
 	t_list	*l_b;
+	t_list	*args;
 
 	error_checker(argc, argv);
 	l_a = ft_list_new();
 	l_b = ft_list_new();
+	args = get_args(argc, argv);
 	argv++;
 	while (*argv)
 	{
@@ -28,8 +30,7 @@ int		main(int argc, char **argv)
 	}
 	if (is_sort(l_a, l_b))
 	{
-		free3(l_a);
-		free3(l_b);
+		free_double(l_a, l_b);
 		exit(1);
 	}
 	else
