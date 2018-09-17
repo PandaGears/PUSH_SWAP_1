@@ -6,13 +6,13 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 15:42:46 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/17 13:01:04 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/17 18:01:22 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int			is_not_digit(char *str)
+int		is_not_digit(char *str)
 {
 	int i;
 
@@ -22,50 +22,50 @@ int			is_not_digit(char *str)
 	while (str[i])
 	{
 		if (str[i] != '-' && str[i] != '+' && \
-				(!(ft_isdigit(str[i]))) && (!(ft_isspace(str[i]))))
+		(!(ft_isdigit(str[i]))) && (!(ft_isspace(str[i]))))
 			return (1);
 		i++;
 	}
 	return (0);
 }
 
-int			dup_check(int argc, char **argv)
+int		is_duplicates(t_list *list)
 {
-	int i;
-	int j;
-	int tmp;
+	int			curr;
+	t_node		*node;
+	t_node		*tmp;
 
-	i = 1;
-	while (i < argc)
+	if (!list)
+		return (0);
+	node = list->head;
+	tmp = list->head;
+	curr = node->data;
+	while (tmp)
 	{
-		tmp = ft_atoi(argv[i]);
-		j = i;
-		while (j < argc - 1)
+		node = tmp;
+		curr = tmp->data;
+		while (node->next)
 		{
-			if (tmp == ft_atoi(argv[j + 1]))
+			if (curr == node->next->data)
 				return (1);
-			j++;
+			node = node->next;
 		}
-		i++;
+		tmp = tmp->next;
 	}
 	return (0);
 }
 
-void		error_checker(int argc, char **argv)
+void	error_checker(char **argv, t_list *list)
 {
-	if (argc <= 1)
-		exit(1);
-	if (dup_check(argc, argv) == 1)
+	if ((is_duplicates(list) == 1))
 		error();
 	argv++;
 	while (*argv)
 	{
-		if (ft_atol(*argv) > 2147483647 || ft_atol(*argv) < -2147483648)
+		if (ft_atol(*argv) > 2147483647 || ft_atol(*argv) < -2147483647)
 			error();
 		if ((is_not_digit(*argv)) == 1)
 			error();
-		if (argc <= 1)
-			exit(1);
 		argv++;
 	}
 }

@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/17 18:10:36 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/17 18:10:41 by tradlof          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
@@ -32,7 +42,7 @@ int					is_sort(t_list *l_a, t_list *l_b);
 int					is_not_digit(char *str);
 int					dup_check(int argc, char **argv);
 int					is_list(t_list *lst);
-void				error_checker(int argc, char **argv);
+void				error_checker(char **argv, t_list *list);
 void				error(void);
 void				ok(void);
 void				ko(void);

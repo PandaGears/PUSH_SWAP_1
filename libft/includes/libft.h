@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 17:03:38 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/17 14:20:03 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/17 18:04:45 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,10 @@ typedef struct			s_gnl
 	int					ret;
 	int					i;
 	char				delimiter;
+	char				*text;
+	char				*tempo;
+	struct s_gnl		*next;
+	int					fd;
 }						t_gnl;
 
 typedef struct			s_node

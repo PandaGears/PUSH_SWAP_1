@@ -19,7 +19,7 @@ SRC_NAME_1 = algo_choice.c algos_sets.c algos_tool_identifier.c \
 
 				
 SRC_NAME_2 = checker_main.c swap.c push.c rotate.c reverse_rotate.c checker_instruct.c notify.c \
-				is_sort.c error_checker.c algo_tools_free.c
+				is_sort.c error_checker.c algo_tools_free.c get_arg.c
 
 OBJ_NAME_1 = $(SRC_NAME_1:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 12:30:12 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/17 12:31:50 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/17 18:01:56 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,19 @@
 
 int		main(int argc, char **argv)
 {
-	t_list	*l_a;
-	t_list	*l_b;
-	t_list	*args;
+	t_list	*list_a;
+	t_list	*list_b;
 
-	error_checker(argc, argv);
-	l_a = ft_list_new();
-	l_b = ft_list_new();
-	args = get_args(argc, argv);
-	argv++;
-	while (*argv)
+	if (argc > 1)
 	{
-		l_a = ft_list_append(l_a, ft_atoi(*argv));
-		argv++;
-	}
-	if (is_sort(l_a, l_b))
-	{
-		free_double(l_a, l_b);
-		exit(1);
+		list_a = get_args(argc, argv);
+		error_checker(argv, list_a);
+		list_b = ft_list_new();
+		if (is_sort(list_a, list_b))
+			exit(1);
+		else
+			decisions(list_a, list_b);
 	}
 	else
-		decisions(l_a, l_b);
+		exit(1);
 }
