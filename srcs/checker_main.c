@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 17:44:15 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/17 18:01:26 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/18 16:34:10 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int		main(int argc, char **argv)
 		if (is_sort(list_a, list_b))
 		{
 			free3(list_a);
+			free3(list_b);
 			ok();
 		}
 		else

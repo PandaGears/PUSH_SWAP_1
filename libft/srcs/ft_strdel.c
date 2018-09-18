@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/02 08:38:31 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/12 14:19:35 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/18 09:20:18 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_strdel(char **as)
 {
 	if (as != NULL)
-		ft_memdel((void **)as);
+		free2(as);
 }

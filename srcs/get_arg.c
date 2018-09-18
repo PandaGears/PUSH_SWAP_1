@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 14:13:07 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/17 18:29:01 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/18 16:34:36 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_list		*get_args(int len, char **argv)
 		split = ft_strsplit(argv[i], ' ');
 		while (split[++j] != NULL)
 			ret = ft_list_append(ret, ft_atoi(split[j]));
-		free2(split);
+		free4(&split);
 	}
 	return (ret);
 }

@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 18:10:36 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/18 07:44:55 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/18 16:33:36 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,5 +116,6 @@ int					get_last(t_list *list);
 void				move_list_b_to_a(t_list *la, t_list *lb);
 
 void				free3(t_list *list);
+void				free4(char ***stack);
 void				free_double(t_list *l_a, t_list *l_b);
 #endif

@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 12:30:12 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/17 18:01:56 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/18 16:35:44 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,11 @@ int		main(int argc, char **argv)
 		error_checker(argv, list_a);
 		list_b = ft_list_new();
 		if (is_sort(list_a, list_b))
+		{
+			free3(list_a);
+			free3(list_b);
 			exit(1);
+		}
 		else
 			decisions(list_a, list_b);
 	}
