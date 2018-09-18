@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/23 07:41:25 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/15 12:36:12 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/18 07:43:19 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	int		index;
 
 	dest = (char *)malloc(sizeof(char) * ft_strlen(s1));
-	if (!dest)
+	if (dest == NULL)
 		return (dest);
 	index = 0;
 	while (s1[index] != '\0')

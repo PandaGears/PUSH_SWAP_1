@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_arg.c                                          :+:      :+:    :+:   */
+/*   ft_list_len.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/08 14:13:07 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/17 18:29:01 by tradlof          ###   ########.fr       */
+/*   Created: 2018/09/18 07:41:24 by tradlof           #+#    #+#             */
+/*   Updated: 2018/09/18 07:52:24 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../includes/libft.h"
 
-t_list		*get_args(int len, char **argv)
+size_t	ft_list_len(t_list *begin_list)
 {
-	t_list	*ret;
-	char	**split;
 	int		i;
-	int		j;
+	t_node	*tmp;
 
 	i = 0;
-	ret = ft_list_new();
-	while (++i < len)
+	tmp = begin_list->head;
+	if (tmp)
 	{
-		j = -1;
-		split = ft_strsplit(argv[i], ' ');
-		while (split[++j] != NULL)
-			ret = ft_list_append(ret, ft_atoi(split[j]));
-		free2(split);
+		while (tmp)
+		{
+			i++;
+			tmp = tmp->next;
+		}
 	}
-	return (ret);
+	return (i);
 }

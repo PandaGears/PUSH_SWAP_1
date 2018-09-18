@@ -6,7 +6,7 @@
 #    By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/02 08:22:23 by tradlof           #+#    #+#              #
-#    Updated: 2018/09/17 13:28:54 by tradlof          ###   ########.fr        #
+#    Updated: 2018/09/18 07:42:36 by tradlof          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ SRC_NAME = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c \
 	ft_create_elem.c ft_countwords.c ft_list_append.c ft_list_del.c \
 	ft_list_new.c ft_list_prepend.c ft_print_list.c ft_swap.c ft_pivot.c \
 	ft_atol.c amount_of_words.c free_all.c array_cpy.c ft_isnumber.c \
-	ft_conchar.c ft_dup_conchar.c ft_index_of_char.c g_n_l.c get_next.c
+	ft_conchar.c ft_dup_conchar.c ft_index_of_char.c g_n_l.c get_next.c ft_list_len.c
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
 OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))

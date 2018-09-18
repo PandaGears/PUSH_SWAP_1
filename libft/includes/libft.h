@@ -6,7 +6,7 @@
 /*   By: tradlof <tradlof@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 17:03:38 by tradlof           #+#    #+#             */
-/*   Updated: 2018/09/17 18:04:45 by tradlof          ###   ########.fr       */
+/*   Updated: 2018/09/18 07:42:43 by tradlof          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,6 +142,8 @@ void					ft_list_remove_if(t_list **begin_list,
 		void *content_ref, int (*cmp)());
 void					ft_list_merge(t_list **begin_list1,
 		t_list *begin_list2);
+
+size_t					ft_list_len(t_list *begin_list);
 
 void					*ft_memset(void *b, int c, size_t len);
 void					ft_bzero(void *s, size_t n);
