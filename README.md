@@ -23,17 +23,18 @@ Sounds about right, right? Except WAIT!!!! THERE'S MORE!
 
 These programs have to account for some certain things: 
                                                         
-    - [x] We want to sort intigers, so no letters or other ascii values allowed!
+  - [x] We want to sort intigers, so no letters or other ascii values allowed!
                                                         
-    - [x] We can't have duplicates, triplicates etc. of the same intigers.
+  - [x] We can't have duplicates, triplicates etc. of the same intigers.
                                                         
-    - [x] All intigers have to end somewhere, so we can't have any intigers greater than the MAXINT or lower than the MININT.
+  - [x] All intigers have to end somewhere, so we can't have any intigers greater than the MAXINT or lower than the MININT.
                                                         
-    - [x] No arguments WILL result in a complete ignore from the program
+  - [x] No arguments WILL result in a complete ignore from the program
                                                         
-    - [x] The checker is only able to use the instructions mentioned. bring up any imaginary instruction, and it won't work!
+  - [x] The checker is only able to use the instructions mentioned. bring up any imaginary instruction, and it won't work!
                                                          
-    - [x] Only one space allowed between the arguments... clingy guys, much?
+  - [x] Only one space allowed between the arguments... clingy guys, much?
                                                         
-    - [] As for only the Push_Swap: There has to ba as few instructions the program should dole out (we want an efficient one)
-Sounds about better...
+  - [ ] As for only the Push_Swap: There has to ba as few instructions the program should dole out (we want an efficient one)
+
+Sounds a little better...
